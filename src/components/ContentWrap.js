@@ -9,16 +9,18 @@ const ContentWrap = ({ children, maxWidth, ...props }) => {
   return (
     // Outer div used to set margins without reducing the maxWidth size.
     <Flex {...props} sx={{ px: [3, 4], flexDirection: 'column' }}>
-      <div
+      <Flex
         sx={{
           position: 'relative',
           maxWidth: maxWidth,
           width: '100%',
           mx: 'auto',
+          flexGrow: 1,
+          flexDirection: 'column',
         }}
       >
         {children}
-      </div>
+      </Flex>
     </Flex>
   );
 };

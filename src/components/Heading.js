@@ -17,6 +17,7 @@ const Heading = ({ variant, overflow, as: Element, ...props }) => {
     <Element
       {...props}
       sx={{
+        mt: 0,
         variant: `text.${variant || defaultVariantMap[Element]}`,
         ...(overflow === 'ellipsis' && {
           overflow: 'hidden',

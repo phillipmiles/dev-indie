@@ -9,9 +9,7 @@ export default {
     // Menlo is a nice backup shipped with Mac OSX Snow Leopard only.
     monospace: 'source-code-pro, Menlo, monospace',
   },
-  fontSizes: [
-    13.5, 18, 23.99, 31.98, 42.63, 56.83, 75.76
-  ],
+  fontSizes: [13.5, 18, 23.99, 31.98, 42.63, 56.83, 75.76],
   fontWeights: {
     regular: 400,
     bold: 700,
@@ -83,29 +81,39 @@ export default {
   },
   colors: {
     white: '#ffffff',
-    black: "#262C35",
+    black: '#262C35',
     text: '#262C35',
     background: '#fff',
     primary: '#007BE4',
     secondary: '#FFC700',
-    neutral: ['', '', '', '', '', '', '', '', '#ECF4FA', '', ''],
+    neutral: ['', '', '', '', '', '', '#8EADCD', '', '#ECF4FA', '', ''],
   },
   styles: {
     // Global styles applied to the body element.
     root: {
       fontFamily: 'body',
       fontWeight: 'body',
-      fontSize: 1
+      fontSize: 1,
+      WebkitFontSmoothing: 'antialiased',
+      MozOsxFontSmoothing: 'grayscale',
     },
   },
   forms: {
     input: {
-      borderColor: 'neutral.8',
-      pl: '12px',
-      pr: '12px',
+      bg: 'white',
+      height: 56,
+      borderRadius: 32,
+      pl: 4,
+      pr: 4,
+      color: 'text',
+      fontFamily: 'body',
+      borderWidth: 0,
       ':focus': {
         borderColor: 'primary',
         outline: 'none',
+      },
+      '::placeholder': {
+        color: 'neutral.6',
       },
     },
   },
