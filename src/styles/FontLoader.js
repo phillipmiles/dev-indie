@@ -4,9 +4,9 @@ import WebFont from 'webfontloader';
 const FontLoader = ({ children }) => {
   useEffect(() => {
     WebFont.load({
-      google: {
-        families: ['Droid Sans', 'Droid Serif'],
-      },
+      typekit: {
+        id: 'ner5ewy'
+      }
     });
   }, []);
 

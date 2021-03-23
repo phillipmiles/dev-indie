@@ -1,14 +1,15 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
-import { node } from 'prop-types';
+import { node, oneOf } from 'prop-types';
 
 interface Props {
+  variant?: String,
   children?: JSX.Element;
 }
 
-const Paragraph = ({ children, ...props }: Props): JSX.Element => {
+const Paragraph = ({ variant, children, ...props }: Props): JSX.Element => {
   return (
-    <p {...props} sx={{}}>
+    <p {...props} sx={{ variant: `text.${variant || 'body'}` }}>
       {children}
     </p>
   );
@@ -16,6 +17,11 @@ const Paragraph = ({ children, ...props }: Props): JSX.Element => {
 
 Paragraph.propTypes = {
   children: node,
+  variant: oneOf([
+    'body',
+    'callout',
+    'detail',
+  ]),
 };
 
 export default Paragraph;
