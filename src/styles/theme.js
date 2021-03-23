@@ -1,5 +1,8 @@
 export default {
   space: [0, 4, 8, 16, 24, 32, 48, 64, 96, 128, 256, 512],
+  sizes: {
+    content: 1080,
+  },
   fonts: {
     body: 'filson-pro, sans-serif',
     heading: 'filson-pro, sans-serif',
@@ -92,6 +95,7 @@ export default {
     root: {
       fontFamily: 'body',
       fontWeight: 'body',
+      fontSize: 1
     },
   },
   forms: {

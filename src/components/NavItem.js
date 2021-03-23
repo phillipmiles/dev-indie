@@ -1,17 +1,11 @@
 /** @jsx jsx */
 import PropTypes from 'prop-types';
-import { useCallback } from 'react';
 import { jsx } from 'theme-ui';
-import useRouteTo from '../hooks/useRouteTo';
+import Link from './Link';
 
 const NavItem = ({ to, onClick, ...props }) => {
-  const routeTo = useRouteTo();
 
-  const navigate = useCallback(() => {
-    routeTo.push(to);
-  }, [to, routeTo]);
-
-  return <button {...props} onClick={to ? navigate : onClick} />;
+  return <Link {...props} to={to} sx={{ textDecoration: 'none' }}></Link>
 };
 
 NavItem.propTypes = {

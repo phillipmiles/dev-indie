@@ -33,7 +33,6 @@ const Router = () => {
   return (
     <RRRouter history={history}>
       <ScrollToTop />
-      <Nav />
       <Switch>
         <Route path={routeUrls.blog}>
           <Blog />
