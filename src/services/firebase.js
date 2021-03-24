@@ -6,6 +6,7 @@ import firebase from 'firebase/app';
 
 // If you enabled Analytics in your project, add the Firebase SDK for Analytics
 import 'firebase/analytics';
+import 'firebase/firestore';
 
 // Set the configuration for your app
 var config = {

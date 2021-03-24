@@ -25,6 +25,10 @@ const About = loadable(() => import('../pages/About.container'), {
   fallback: <ActivityIndicator />,
 });
 
+const Post = loadable(() => import('../pages/Post.container'), {
+  fallback: <ActivityIndicator />,
+});
+
 const Router = () => {
   // Will listen for changes to the history location and send them to firebase
   // analytics as page_view events.
@@ -34,8 +38,14 @@ const Router = () => {
     <RRRouter history={history}>
       <ScrollToTop />
       <Switch>
-        <Route path={routeUrls.blog}>
+        {/* <Route path="posts" element={<Posts />}>
+          <Route path="/" element={<PostLists />} />
+        </Route> */}
+        <Route exact path={routeUrls.blog}>
           <Blog />
+        </Route>
+        <Route path={`${routeUrls.blog}/:id`}>
+          <Post />
         </Route>
         <Route path={routeUrls.projects}>
           <Projects />
