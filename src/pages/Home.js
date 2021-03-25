@@ -12,6 +12,7 @@ import routeUrls from '../router/routeUrls';
 import PostListItem from '../components/PostListItem';
 import SubscribeForm from '../components/SubscribeForm';
 import SubscribeContentBlock from '../components/SubscribeContentBlock';
+import Footer from '../components/Footer';
 
 const Home = ({ posts }) => {
   return (
@@ -117,6 +118,7 @@ const Home = ({ posts }) => {
         </div>
       </ContentWrap>
       <SubscribeContentBlock />
+      <Footer />
     </div>
   );
 };

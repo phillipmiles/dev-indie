@@ -5,8 +5,8 @@ const FontLoader = ({ children }) => {
   useEffect(() => {
     WebFont.load({
       typekit: {
-        id: 'ner5ewy'
-      }
+        id: 'ner5ewy',
+      },
     });
   }, []);
 

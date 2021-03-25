@@ -1,6 +1,10 @@
 // tsconfig.json
 {
   "compilerOptions": {
-    "jsx": "react"
+    "jsx": "react",
+    // Fixes error...
+    // Module '"/Users/lappy/Documents/Code/dev-indie/node_modules/@types/react/index"' can only be default-imported using the 'esModuleInterop' flag
+    // ...when importing React to a tsx file. Has to do with how the React module is exported internally.
+    "esModuleInterop": true
   }
 }
