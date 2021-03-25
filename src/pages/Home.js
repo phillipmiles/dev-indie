@@ -10,6 +10,8 @@ import { imgHomeHero, imgProjectsThumb } from '../assets/assetLoader';
 import ButtonText from '../components/ButtonText';
 import routeUrls from '../router/routeUrls';
 import PostListItem from '../components/PostListItem';
+import SubscribeForm from '../components/SubscribeForm';
+import SubscribeContentBlock from '../components/SubscribeContentBlock';
 
 const Home = ({ posts }) => {
   return (
@@ -61,31 +63,7 @@ const Home = ({ posts }) => {
                 Learn from my many mistakes by subscribing to the Dev Indie
                 newsletter.
               </Paragraph>
-              <Flex>
-                <Input
-                  placeholder="Enter your email"
-                  sx={{ boxShadow: '0 2px 4px 0 #004a88', mr: 2 }}
-                />
-                <button
-                  sx={{
-                    borderRadius: 32,
-                    height: 56,
-                    bg: 'secondary',
-                    boxShadow: '0 2px 4px 0 #004a88',
-                    outline: 'none',
-                    border: 'none',
-                    color: 'primary',
-                    fontFamily: 'body',
-                    fontSize: '1',
-                    px: 5,
-                  }}
-                >
-                  Subscribe
-                </button>
-              </Flex>
-              <Paragraph variant="detail" sx={{ textAlign: 'center' }}>
-                Unsubscribe at any time
-              </Paragraph>
+              <SubscribeForm />
             </div>
           </Flex>
         </ContentWrap>
@@ -134,7 +112,11 @@ const Home = ({ posts }) => {
             sx={{ mb: 7 }}
           />
         ))}
+        <div sx={{ textAlign: 'center', mt: 3, mb: 9 }}>
+          <ButtonText>Browse all posts</ButtonText>
+        </div>
       </ContentWrap>
+      <SubscribeContentBlock />
     </div>
   );
 };
