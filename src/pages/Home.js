@@ -5,11 +5,13 @@ import Paragraph from '../components/Paragraph';
 import Heading from '../components/Heading';
 import Nav from '../components/Nav';
 import ContentWrap from '../components/ContentWrap';
-// import heroImage from '../assets/dev-indie-hero.jpg';
-import heroImage from '../assets/dev-indie-hero.png';
 import Image from '../components/Image';
+import { imgHomeHero, imgProjectsThumb } from '../assets/assetLoader';
+import ButtonText from '../components/ButtonText';
+import routeUrls from '../router/routeUrls';
+import PostListItem from '../components/PostListItem';
 
-const Home = () => {
+const Home = ({ posts }) => {
   return (
     <div>
       <div
@@ -34,7 +36,8 @@ const Home = () => {
               }}
             >
               <Image
-                src={heroImage}
+                src={imgHomeHero}
+                alt=""
                 sx={{
                   position: 'absolute',
                   top: -16,
@@ -50,7 +53,7 @@ const Home = () => {
                 pt: 8,
               }}
             >
-              <Heading as="h1">
+              <Heading as="h1" sx={{ mb: 5 }}>
                 I'm making
                 <br /> apps, somehow.
               </Heading>
@@ -87,14 +90,57 @@ const Home = () => {
           </Flex>
         </ContentWrap>
       </div>
-      <ContentWrap>
-        <Heading as="h2">The projects</Heading>
-        <Paragraph>Paragraph</Paragraph>
+      <ContentWrap sx={{ mt: 8 }}>
+        <Flex
+          sx={{ bg: 'neutral.8', borderRadius: 24, overflow: 'hidden', mb: 8 }}
+        >
+          <Image src={imgProjectsThumb} sx={{ width: '50%' }} alt="" />
+          <Flex
+            sx={{
+              p: 6,
+              width: '50%',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+            }}
+          >
+            <div>
+              <Heading as="h3" sx={{ mb: 4 }}>
+                The projects
+              </Heading>
+              <Paragraph>
+                Take a look at detailed breakdowns for each of my apps. See how
+                they’re progressing and what decision’s I’m making in developing
+                them.
+              </Paragraph>
+            </div>
+            <ButtonText to={routeUrls.projects} sx={{ alignSelf: 'flex-end' }}>
+              Go to projects
+            </ButtonText>
+          </Flex>
+        </Flex>
+        <Heading as="h3" sx={{ mb: 6 }}>
+          Recent posts
+        </Heading>
+        {posts.map((post) => (
+          <PostListItem
+            key={post.slug}
+            title={post.title}
+            description={post.description}
+            imageSrc={post.thumbSrc}
+            tag={post.tag}
+            timePublished={post.timePublished}
+            readingLength={post.readingLength}
+            to={`${routeUrls.post(post.slug)}`}
+            sx={{ mb: 7 }}
+          />
+        ))}
       </ContentWrap>
     </div>
   );
 };
 
-Home.propTypes = {};
+Home.defaultProps = {
+  posts: [],
+};
 
 export default Home;

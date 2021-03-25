@@ -3,7 +3,7 @@ import { jsx } from 'theme-ui';
 import { node, oneOf } from 'prop-types';
 
 interface Props {
-  variant?: String,
+  variant?: string;
   children?: JSX.Element;
 }
 
@@ -17,11 +17,7 @@ const Paragraph = ({ variant, children, ...props }: Props): JSX.Element => {
 
 Paragraph.propTypes = {
   children: node,
-  variant: oneOf([
-    'body',
-    'callout',
-    'detail',
-  ]),
+  variant: oneOf(['body', 'callout', 'detail']),
 };
 
 export default Paragraph;

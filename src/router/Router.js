@@ -3,11 +3,14 @@ import { jsx } from 'theme-ui';
 import { Router as RRRouter, Switch, Route } from 'react-router-dom';
 import loadable from '@loadable/component';
 import ActivityIndicator from '../components/ActivityIndicator';
-import Nav from '../components/Nav';
 import routeUrls from './routeUrls';
 import ScrollToTop from './ScrollToTop';
 import history from './history';
 import useLogPageView from '../hooks/useLogPageView';
+
+// Fix for Parcel not handling images within dynamically loaded components
+// correctly.
+import '../assets/assetLoader';
 
 const Home = loadable(() => import('../pages/Home.container.js'), {
   fallback: <ActivityIndicator />,
@@ -41,6 +44,7 @@ const Router = () => {
         {/* <Route path="posts" element={<Posts />}>
           <Route path="/" element={<PostLists />} />
         </Route> */}
+
         <Route exact path={routeUrls.blog}>
           <Blog />
         </Route>

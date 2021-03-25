@@ -2,8 +2,7 @@
 import PropTypes from 'prop-types';
 import { jsx } from 'theme-ui';
 import marksy from 'marksy';
-import { useEffect, useState } from 'react';
-import { createElement } from 'React';
+import { useEffect, useState, createElement } from 'react';
 import Paragraph from './Paragraph';
 
 

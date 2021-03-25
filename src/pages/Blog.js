@@ -12,7 +12,7 @@ const Blog = ({ posts }) => {
         <Nav />
         <h1>Blog</h1>
         <Paragraph>Paragraph</Paragraph>
-        {posts.map(post => (
+        {posts.map((post) => (
           <div key={post.slug}>
             <Paragraph>{post.title}</Paragraph>
             <Link to={`blog/${post.slug}`}>View</Link>

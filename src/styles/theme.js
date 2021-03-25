@@ -86,7 +86,7 @@ export default {
     background: '#fff',
     primary: '#007BE4',
     secondary: '#FFC700',
-    neutral: ['', '', '', '', '', '', '#8EADCD', '', '#ECF4FA', '', ''],
+    neutral: ['', '', '', '', '', '', '#8EADCD', '#98A3B2', '#ECF4FA', '', ''],
   },
   styles: {
     // Global styles applied to the body element.
@@ -94,8 +94,32 @@ export default {
       fontFamily: 'body',
       fontWeight: 'body',
       fontSize: 1,
-      WebkitFontSmoothing: 'antialiased',
-      MozOsxFontSmoothing: 'grayscale',
+
+      '*': {
+        WebkitFontSmoothing: 'antialiased !important',
+        MozOsxFontSmoothing: 'grayscale !important',
+        textRendering: 'optimizelegibility !important',
+      },
+
+      'h1, h2, h3, h4, h5, h6': {
+        margin: 0,
+      },
+
+      p: {
+        mt: 0,
+        mb: 3,
+      },
+
+      a: {
+        textDecoration: 'none',
+        color: 'black',
+        cursor: 'pointer',
+      },
+
+      img: {
+        // Removes small bottom margin.
+        display: 'block',
+      },
     },
   },
   forms: {
