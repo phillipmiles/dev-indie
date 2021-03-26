@@ -34,12 +34,15 @@ const SubscribeContentBlock = ({
       sx={{
         bg: 'primary',
         color: 'white',
-        py: 8,
+        py: [6, 8],
       }}
     >
       <Flex sx={{ justifyContent: 'center' }}>
         <div sx={{ maxWidth: '650px' }}>
-          <Paragraph variant="callout" sx={{ mb: 5 }}>
+          <Paragraph
+            variant="callout"
+            sx={{ mb: 5, textAlign: ['center', 'left'] }}
+          >
             Learn from my many mistakes by subscribing to the Dev Indie
             newsletter.
           </Paragraph>

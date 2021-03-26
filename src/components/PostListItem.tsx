@@ -27,13 +27,16 @@ const PostListItem = ({
   ...props
 }: Props): JSX.Element => {
   return (
-    <Flex {...props}>
-      <Link to={to} sx={{ mr: 6, borderRadius: 24, overflow: 'hidden' }}>
+    <Flex {...props} sx={{ flexDirection: ['column', 'row'] }}>
+      <Link
+        to={to}
+        sx={{ mr: [0, 6], mb: [4, 0], borderRadius: 24, overflow: 'hidden' }}
+      >
         <Image
           src={imageSrc}
           alt={title}
           sx={{
-            width: '328px',
+            width: ['100%', '328px'],
             height: '192px',
             objectPosition: '50% 50%',
             objectFit: 'cover',
@@ -42,10 +45,16 @@ const PostListItem = ({
       </Link>
       <Flex sx={{ justifyContent: 'center', flexDirection: 'column' }}>
         <Link to={to}>
-          <Heading as="h4" sx={{ mb: '12px' }}>
+          <Heading
+            as="h4"
+            sx={{
+              mb: [2, '12px'],
+              variant: ['text.heading5', 'text.heading4'],
+            }}
+          >
             {title}
           </Heading>
-          <Paragraph>{description}</Paragraph>
+          <Paragraph sx={{ mb: [2, 3] }}>{description}</Paragraph>
         </Link>
         <Flex sx={{ color: 'neutral.6' }}>
           <Text variant="detail" sx={{ mr: 4, fontWeight: 'bold' }}>

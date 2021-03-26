@@ -39,7 +39,7 @@ const Blog = ({ posts }) => {
             timePublished={post.timePublished}
             readingLength={post.readingLength}
             to={`${routeUrls.post(post.slug)}`}
-            sx={{ mb: 7 }}
+            sx={{ mb: [6, 7] }}
           />
         ))}
       </ContentWrap>

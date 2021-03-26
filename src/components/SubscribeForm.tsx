@@ -16,10 +16,15 @@ interface Props {
 const SubscribeForm = ({ ...props }: Props): JSX.Element => {
   return (
     <div {...props}>
-      <Flex sx={{ mb: 3 }}>
+      <Flex sx={{ mb: 3, flexDirection: ['column', 'row'] }}>
         <Input
           placeholder="Enter your email"
-          sx={{ boxShadow: '0 2px 4px 0 #006ECC', mr: 2 }}
+          sx={{
+            boxShadow: '0 2px 4px 0 #006ECC',
+            mr: [0, 2],
+            mb: ['12px', 0],
+            textAlign: ['center', 'left'],
+          }}
         />
         <button
           sx={{
@@ -33,6 +38,7 @@ const SubscribeForm = ({ ...props }: Props): JSX.Element => {
             fontFamily: 'body',
             fontSize: '1',
             px: 5,
+            width: ['100%', 'auto'],
           }}
         >
           Subscribe

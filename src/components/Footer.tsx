@@ -23,15 +23,22 @@ const Footer = ({ ...props }: Props): JSX.Element => {
       sx={{
         bg: 'black',
         color: 'white',
-        py: 8,
+        py: [6, 8],
       }}
     >
-      <Flex sx={{ justifyContent: 'space-between' }}>
+      <Flex
+        sx={{
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          flexDirection: ['column', 'row'],
+        }}
+      >
         <Flex
           sx={{
             // width: '33%',
             minWidth: 240,
             alignItems: 'center',
+            mb: [4, 0],
           }}
         >
           <Image
@@ -48,23 +55,44 @@ const Footer = ({ ...props }: Props): JSX.Element => {
           sx={{
             // width: '33%',
             minWidth: 240,
-            flexDirection: 'column',
+            flexDirection: ['row', 'column'],
             justifyContent: 'center',
           }}
         >
-          <Text sx={{ color: 'neutral.6' }}>Follow me on Twitter</Text>
-          <Text variant="detail">@PhillipAMiles</Text>
+          <Text
+            sx={{
+              color: 'neutral.6',
+              variant: ['text.detail', 'text.body'],
+              mx: [2, 0],
+            }}
+          >
+            Follow me on Twitter
+          </Text>
+          <Text variant="detail" sx={{ mx: [1, 0] }}>
+            @PhillipAMiles
+          </Text>
         </Flex>
         <Flex
           sx={{
             // width: '33%',
             minWidth: 240,
-            flexDirection: 'column',
+            flexDirection: ['row', 'column'],
             justifyContent: 'center',
           }}
         >
-          <Text sx={{ color: 'neutral.6' }}>Get in touch</Text>
-          <Text variant="detail">phillip@devindie.dev</Text>
+          <Text
+            sx={{
+              color: 'neutral.6',
+              variant: ['text.detail', 'text.body'],
+              mx: [2, 0],
+            }}
+          >
+            Get in touch
+          </Text>
+          <Text variant="detail" sx={{ mx: [1, 0] }}>
+            {' '}
+            phillip@devindie.dev
+          </Text>
         </Flex>
       </Flex>
     </ContentWrap>
