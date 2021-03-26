@@ -3,13 +3,13 @@ import { jsx } from 'theme-ui';
 import NavItem from './NavItem';
 import routeUrls from '../router/routeUrls';
 import Image from './Image';
-import { imgLogoFull, imgLogoBlack } from '../assets/assetLoader';
+import { imgLogoFull, imgLogoBlack, imgLogoWhite } from '../assets/assetLoader';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
 import Link from './Link';
 
-const Nav = ({ invert }) => {
+const Nav = ({ invert, logoVariant }) => {
   const textColor = invert ? 'white' : 'black';
 
   return (
@@ -24,7 +24,13 @@ const Nav = ({ invert }) => {
     >
       <Link to={routeUrls.home}>
         <Image
-          src={invert ? imgLogoFull : imgLogoBlack}
+          src={
+            invert
+              ? logoVariant === 'full'
+                ? imgLogoFull
+                : imgLogoWhite
+              : imgLogoBlack
+          }
           alt="Dev Indie logo"
           sx={{ width: 108 }}
         />
@@ -52,6 +58,11 @@ const Nav = ({ invert }) => {
 
 Nav.propTypes = {
   invert: PropTypes.bool,
+  logoVariant: PropTypes.oneOf(['full', 'simple']),
+};
+
+Nav.defaultProps = {
+  logoVariant: 'full',
 };
 
 // global error handling -

@@ -1,14 +1,20 @@
 /** @jsx jsx */
-import { Flex, jsx } from 'theme-ui';
+import { jsx } from 'theme-ui';
 import ContentWrap from './ContentWrap';
 import Nav from './Nav';
 
 interface Props {
   children?: JSX.Element;
   invert: boolean;
+  logoVariant: string;
 }
 
-const Header = ({ children, invert, ...props }: Props): JSX.Element => (
+const Header = ({
+  children,
+  invert,
+  logoVariant,
+  ...props
+}: Props): JSX.Element => (
   <header
     {...props}
     sx={{
@@ -17,7 +23,7 @@ const Header = ({ children, invert, ...props }: Props): JSX.Element => (
       flexDirection: 'column',
     }}
   >
-    <Nav invert={invert} />
+    <Nav invert={invert} logoVariant={logoVariant} />
 
     <ContentWrap sx={{ flexGrow: 1 }}>{children}</ContentWrap>
   </header>
@@ -25,6 +31,7 @@ const Header = ({ children, invert, ...props }: Props): JSX.Element => (
 
 Header.defaultProps = {
   invert: true,
+  logoVariant: 'full',
 };
 
 export default Header;

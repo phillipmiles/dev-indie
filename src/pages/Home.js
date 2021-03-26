@@ -13,62 +13,57 @@ import PostListItem from '../components/PostListItem';
 import SubscribeForm from '../components/SubscribeForm';
 import SubscribeContentBlock from '../components/SubscribeContentBlock';
 import Footer from '../components/Footer';
+import Header from '../components/Header';
 
 const Home = ({ posts }) => {
   return (
     <div>
-      <div
+      <Header
         sx={{
           bg: 'primary',
           background: 'linear-gradient(0deg, #004b95, #0075db, #0080ed)',
           color: 'white',
           overflow: 'hidden',
-          display: 'flex',
-          flexDirection: 'column',
           minHeight: 800,
         }}
       >
-        <Nav invert />
-
-        <ContentWrap sx={{ flexGrow: 1 }}>
-          <Flex sx={{ flexGrow: 1 }}>
-            <div
+        <Flex sx={{ flexGrow: 1 }}>
+          <div
+            sx={{
+              width: '44%',
+              position: 'relative',
+            }}
+          >
+            <Image
+              src={imgHomeHero}
+              alt=""
               sx={{
-                width: '44%',
-                position: 'relative',
+                position: 'absolute',
+                top: -16,
+                right: 0,
+                height: '112%',
               }}
-            >
-              <Image
-                src={imgHomeHero}
-                alt=""
-                sx={{
-                  position: 'absolute',
-                  top: -16,
-                  right: 0,
-                  height: '112%',
-                }}
-              />
-            </div>
-            <div
-              sx={{
-                width: '56%', //bg: 'red',
-                pb: 150,
-                pt: 8,
-              }}
-            >
-              <Heading as="h1" sx={{ mb: 5 }}>
-                I'm making
-                <br /> apps, somehow.
-              </Heading>
-              <Paragraph variant="callout" sx={{ mb: 6 }}>
-                Learn from my many mistakes by subscribing to the Dev Indie
-                newsletter.
-              </Paragraph>
-              <SubscribeForm />
-            </div>
-          </Flex>
-        </ContentWrap>
-      </div>
+            />
+          </div>
+          <div
+            sx={{
+              width: '56%', //bg: 'red',
+              pb: 150,
+              pt: 8,
+            }}
+          >
+            <Heading as="h1" sx={{ mb: 5 }}>
+              I'm making
+              <br /> apps, somehow.
+            </Heading>
+            <Paragraph variant="callout" sx={{ mb: 6 }}>
+              Learn from my many mistakes by subscribing to the Dev Indie
+              newsletter.
+            </Paragraph>
+            <SubscribeForm />
+          </div>
+        </Flex>
+      </Header>
       <ContentWrap sx={{ mt: 8 }}>
         <Flex
           sx={{ bg: 'neutral.8', borderRadius: 24, overflow: 'hidden', mb: 8 }}

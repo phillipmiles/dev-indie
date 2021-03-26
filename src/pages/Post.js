@@ -15,7 +15,10 @@ import Footer from '../components/Footer';
 const Post = ({ title, tag, readingLength, timePublished, content }) => {
   return (
     <div>
-      <Header sx={{ bg: 'black', minHeight: 500, color: 'white' }}>
+      <Header
+        sx={{ bg: 'black', minHeight: 500, color: 'white' }}
+        logoVariant="simple"
+      >
         <Flex sx={{ flexGrow: 1 }}>
           <div sx={{ width: '380px', position: 'relative', mt: 6, mr: 7 }}>
             <Image
