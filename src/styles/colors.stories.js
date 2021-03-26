@@ -38,6 +38,9 @@ export const Primary = () => {
           <Swatch color="primary" />
         </FlexColItem>
         <FlexColItem cols={2}>
+          <Swatch color="primaryLight" />
+        </FlexColItem>
+        <FlexColItem cols={2}>
           <Swatch color="secondary" />
         </FlexColItem>
         <FlexColItem cols={2}>

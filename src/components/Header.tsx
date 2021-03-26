@@ -13,7 +13,6 @@ const Header = ({ children, invert, ...props }: Props): JSX.Element => (
     {...props}
     sx={{
       bg: 'primary',
-      overflow: 'hidden',
       display: 'flex',
       flexDirection: 'column',
     }}

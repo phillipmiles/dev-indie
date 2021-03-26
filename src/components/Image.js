@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { jsx } from 'theme-ui';
 
 const Image = ({ alt, ...props }) => {
-  return <img {...props} alt={alt} />;
+  return <img {...props} alt={alt ? alt : ''} />;
 };
 
 Image.propTypes = {
@@ -11,7 +11,7 @@ Image.propTypes = {
   src: PropTypes.string.isRequired,
 
   /** alt text */
-  alt: PropTypes.string.isRequired,
+  alt: PropTypes.string,
 };
 
 export default Image;

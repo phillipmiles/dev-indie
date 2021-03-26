@@ -5,7 +5,6 @@ import marksy from 'marksy';
 import { useEffect, useState, createElement } from 'react';
 import Paragraph from './Paragraph';
 
-
 const RenderMarkdown = ({ content }) => {
   const [parsedMarkdown, setParsedMarkdown] = useState();
   console.log(content);
@@ -19,7 +18,11 @@ const RenderMarkdown = ({ content }) => {
       // custom VDOM trees
       elements: {
         h1({ id, children }) {
-          return <h1 className="my-custom-class">{children}</h1>
+          return (
+            <div sx={{ maxWidth: 650, width: '100%' }}>
+              <h1 className="my-custom-class">{children}</h1>
+            </div>
+          );
         },
         h2({ id, children }) { },
         h3({ id, children }) { },
@@ -28,7 +31,13 @@ const RenderMarkdown = ({ content }) => {
         hr() { },
         ol({ children }) { },
         ul({ children }) { },
-        p({ children }) { return <Paragraph>{children}</Paragraph> },
+        p({ children }) {
+          return (
+            <div sx={{ maxWidth: 650, width: '100%' }}>
+              <Paragraph>{children}</Paragraph>
+            </div>
+          );
+        },
         table({ children }) { },
         thead({ children }) { },
         tbody({ children }) { },
@@ -36,7 +45,9 @@ const RenderMarkdown = ({ content }) => {
         th({ children }) { },
         td({ children }) { },
         a({ href, title, target, children }) { },
-        strong({ children }) { return <strong>{children}</strong> },
+        strong({ children }) {
+          return <strong>{children}</strong>;
+        },
         em({ children }) { },
         br() { },
         del({ children }) { },
@@ -52,11 +63,11 @@ const RenderMarkdown = ({ content }) => {
 
     // compiled.tree // The React tree of components
     // compiled.toc // The table of contents, based on usage of headers
-    console.log('compiled', compiled)
+    console.log('compiled', compiled);
     setParsedMarkdown(compiled.tree);
   }, [content]);
 
-  console.log('here', parsedMarkdown)
+  console.log('here', parsedMarkdown);
   return parsedMarkdown ? parsedMarkdown : null;
 };
 
