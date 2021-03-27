@@ -12,7 +12,14 @@ import ContentWrap from '../components/ContentWrap';
 import SubscribeContentBlock from '../components/SubscribeContentBlock';
 import Footer from '../components/Footer';
 
-const Post = ({ title, tag, readingLength, timePublished, content }) => {
+const Post = ({
+  title,
+  tag,
+  readingLength,
+  timePublished,
+  content,
+  thumbSrc,
+}) => {
   return (
     <div>
       <Header
@@ -20,11 +27,20 @@ const Post = ({ title, tag, readingLength, timePublished, content }) => {
         logoVariant="simple"
       >
         <Flex sx={{ flexGrow: 1 }}>
-          <div sx={{ width: '380px', position: 'relative', mt: 6, mr: 7 }}>
+          <div
+            sx={{
+              width: '380px',
+              position: 'relative',
+              mt: 6,
+              mr: 7,
+              flexShrink: 0,
+            }}
+          >
             <Image
-              src={imgProjectsThumb}
+              src={thumbSrc}
               sx={{
                 position: 'absolute',
+                bg: 'neutral.6',
                 borderRadius: 24,
                 borderStyle: 'solid',
                 borderWidth: 4,
@@ -52,7 +68,7 @@ const Post = ({ title, tag, readingLength, timePublished, content }) => {
       <ContentWrap>
         <Flex
           sx={{
-            color: 'neutral.6',
+            color: 'neutral.7',
             ml: '380px',
             height: 8,
             alignItems: 'center',
@@ -62,9 +78,11 @@ const Post = ({ title, tag, readingLength, timePublished, content }) => {
           <Text sx={{ ml: 7, mr: 5 }}>{timePublished}</Text>
           <Text>{readingLength}</Text>
         </Flex>
-        <Flex sx={{ flexDirection: 'column', alignItems: 'center', mb: 9 }}>
+        {/* <Flex sx={{ flexDirection: 'column', alignItems: 'center', mb: 9 }}> */}
+        <div sx={{ mb: 9 }}>
           <RenderMarkdown content={content} />
-        </Flex>
+        </div>
+        {/* </Flex> */}
       </ContentWrap>
       <SubscribeContentBlock />
       <Footer />

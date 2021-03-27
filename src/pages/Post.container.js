@@ -1,6 +1,8 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import Post from './Post';
+import PostAlt from './PostAlt';
+import PostAltAlt from './PostAltAlt';
 import { useParams } from 'react-router-dom';
 import posts from '../posts/posts';
 
@@ -41,6 +43,7 @@ const PostContainer = () => {
       title={post.title}
       content={post.content}
       tag={post.tag}
+      thumbSrc={post.thumbSrc}
       timePublished={isoDateStringToLabel(post.createdAt)}
       readingLength={post.readingLength}
     />

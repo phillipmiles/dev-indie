@@ -3,7 +3,12 @@ import { jsx } from 'theme-ui';
 import NavItem from './NavItem';
 import routeUrls from '../router/routeUrls';
 import Image from './Image';
-import { imgLogoFull, imgLogoBlack, imgLogoWhite } from '../assets/assetLoader';
+import {
+  imgLogoFull,
+  imgLogoBlack,
+  imgLogoPrimary,
+  imgLogoWhite,
+} from '../assets/assetLoader';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
