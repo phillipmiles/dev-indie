@@ -37,7 +37,7 @@ const Nav = ({ invert, logoVariant }) => {
               : imgLogoBlack
           }
           alt="Dev Indie logo"
-          sx={{ width: 108 }}
+          sx={{ height: 74 }}
         />
       </Link>
       <div>

@@ -67,7 +67,8 @@ const RenderMarkdown = ({ content }) => {
                   sx={{
                     borderBottomStyle: 'solid',
                     borderBottomWidth: '1px',
-                    borderBottomColor: 'neutral.7',
+                    // borderBottomColor: 'neutral.7',
+                    borderBottomColor: '#D4DBE6',
                   }}
                 >
                   <Paragraph

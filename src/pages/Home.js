@@ -68,7 +68,7 @@ const Home = ({ posts }) => {
       </Header>
       <ContentWrap sx={{ mt: 8 }}>
         <Flex
-          sx={{ bg: 'neutral.8', borderRadius: 24, overflow: 'hidden', mb: 8 }}
+          sx={{ bg: 'neutral.9', borderRadius: 24, overflow: 'hidden', mb: 8 }}
         >
           <LazyLoader height={468} sx={{ width: '50%' }}>
             <Image src={imgProjectsThumb} alt="" />

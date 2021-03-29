@@ -103,7 +103,19 @@ export default {
     primary: '#007BE4',
     primaryLight: '#59B3FF',
     secondary: '#FFC700',
-    neutral: ['', '', '', '', '', '', '#8EADCD', '#98A3B2', '#ECF4FA', '', ''],
+    neutral: [
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '#8EADCD',
+      '#98A3B2',
+      '#D4DBE6',
+      '#ECF4FA',
+      '',
+    ],
   },
   styles: {
     // Global styles applied to the body element.

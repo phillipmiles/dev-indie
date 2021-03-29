@@ -46,7 +46,14 @@ const Footer = ({ ...props }: Props): JSX.Element => {
             sx={{ borderRadius: 64, width: 7, height: 7, mr: 4 }}
           />
           <Flex sx={{ flexDirection: 'column' }}>
-            <Text sx={{ color: 'neutral.6' }}>My name is</Text>
+            <Text
+              sx={{
+                //color: 'neutral.6',
+                color: 'primaryLight',
+              }}
+            >
+              My name is
+            </Text>
             <Text variant="callout">Phillip Miles</Text>
           </Flex>
         </Flex>
@@ -61,7 +68,8 @@ const Footer = ({ ...props }: Props): JSX.Element => {
         >
           <Text
             sx={{
-              color: 'neutral.6',
+              // color: 'neutral.6',
+              color: 'primaryLight',
               variant: ['text.detail', 'text.body'],
               mx: [2, 0],
             }}
@@ -82,7 +90,8 @@ const Footer = ({ ...props }: Props): JSX.Element => {
         >
           <Text
             sx={{
-              color: 'neutral.6',
+              // color: 'neutral.6',
+              color: 'primaryLight',
               variant: ['text.detail', 'text.body'],
               mx: [2, 0],
             }}

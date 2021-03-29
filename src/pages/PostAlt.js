@@ -61,7 +61,7 @@ const Post = ({
         >
           <div
             sx={{
-              bg: 'neutral.8',
+              bg: 'neutral.9',
               pt: 6,
               pr: 9,
               pl: 8,

@@ -45,7 +45,7 @@ const Post = ({
           <div sx={{ bg: 'white', mx: 9, mt: '400px', pt: 7, pb: 5 }}>
             <div
               sx={{
-                // bg: 'neutral.8',
+                // bg: 'neutral.9',
                 // pt: 6,
                 // pr: 9,
                 // pl: 8,

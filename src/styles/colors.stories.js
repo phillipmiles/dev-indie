@@ -61,6 +61,9 @@ export const Primary = () => {
         <FlexColItem cols={2}>
           <Swatch color="neutral.8" />
         </FlexColItem>
+        <FlexColItem cols={2}>
+          <Swatch color="neutral.9" />
+        </FlexColItem>
       </FlexCol>
     </div>
   );
