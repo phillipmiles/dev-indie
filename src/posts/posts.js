@@ -9,6 +9,20 @@ const posts = [
     createdAt: '2020-06-26T01:11:37.621Z',
     readingLength: '3 minutes',
     tag: 'Tips & Tricks',
+    topics: [
+      {
+        title: 'React',
+        count: 12,
+      },
+      {
+        title: 'Thought Stream',
+        count: 3,
+      },
+      {
+        title: 'Cryptography',
+        count: 3,
+      },
+    ],
     thumbSrc:
       'https://images.unsplash.com/photo-1616707478468-4b0fa44df4e6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
     content: {
@@ -23,6 +37,20 @@ const posts = [
     createdAt: '2020-06-26T01:11:37.621Z',
     readingLength: '3 minutes',
     tag: 'Tips & Tricks',
+    topics: [
+      {
+        title: 'React',
+        count: 12,
+      },
+      {
+        title: 'Thought Stream',
+        count: 3,
+      },
+      {
+        title: 'Cryptography',
+        count: 3,
+      },
+    ],
     thumbSrc:
       'https://s3.amazonaws.com/www-inside-design/uploads/2021/03/Womens-History-Month-ID-Bee-Johnson-810x810.jpg',
     content: {
@@ -37,6 +65,44 @@ const posts = [
     createdAt: '2020-06-26T01:11:37.621Z',
     readingLength: '3 minutes',
     tag: 'Tips & Tricks',
+    topics: [
+      {
+        title: 'React',
+        count: 12,
+      },
+      {
+        title: 'Thought Stream',
+        count: 3,
+      },
+      {
+        title: 'Cryptography',
+        count: 3,
+      },
+      {
+        title: 'React',
+        count: 12,
+      },
+      {
+        title: 'Thought Stream',
+        count: 3,
+      },
+      {
+        title: 'Cryptography',
+        count: 3,
+      },
+      {
+        title: 'React',
+        count: 12,
+      },
+      {
+        title: 'Thought Stream',
+        count: 3,
+      },
+      {
+        title: 'Cryptography',
+        count: 3,
+      },
+    ],
     thumbSrc: imgProjectsThumb,
     content: {
       type: 'text',

@@ -128,6 +128,7 @@ const RenderMarkdown = ({ content }) => {
                   width: '100%',
                   mb: 4,
                   ':first-of-type': { variant: 'text.callout', mb: 5 },
+                  ':last-of-type': { mb: 0 },
                 }}
               >
                 {children}

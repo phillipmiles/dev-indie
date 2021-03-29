@@ -43,6 +43,7 @@ const PostContainer = () => {
       title={post.title}
       content={post.content}
       tag={post.tag}
+      topics={post.topics}
       thumbSrc={post.thumbSrc}
       timePublished={isoDateStringToLabel(post.createdAt)}
       readingLength={post.readingLength}
