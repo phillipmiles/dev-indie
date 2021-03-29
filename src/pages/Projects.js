@@ -14,7 +14,7 @@ import Footer from '../components/Footer';
 const Projects = ({ posts }) => {
   return (
     <div>
-      <Header sx={{ color: 'white', minHeight: 500 }}>
+      <Header sx={{ color: 'white', minHeight: 400 }}>
         <Flex
           sx={{
             flexGrow: 1,

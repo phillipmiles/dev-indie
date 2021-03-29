@@ -15,7 +15,7 @@ import { imgAvatar } from '../assets/assetLoader';
 const About = ({ posts }) => {
   return (
     <div>
-      <Header sx={{ minHeight: 500, color: 'white' }}>
+      <Header sx={{ minHeight: 400, color: 'white' }}>
         <Flex sx={{ flexGrow: 1 }}>
           <Flex
             sx={{

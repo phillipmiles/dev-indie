@@ -34,7 +34,9 @@ const Nav = ({ invert, logoVariant }) => {
               ? logoVariant === 'full'
                 ? imgLogoFull
                 : imgLogoWhite
-              : imgLogoBlack
+              : logoVariant === 'primary'
+                ? imgLogoPrimary
+                : imgLogoBlack
           }
           alt="Dev Indie logo"
           sx={{ height: [64, 74] }}
