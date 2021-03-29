@@ -32,7 +32,7 @@ const posts = [
   },
   {
     slug: 'test-post-2',
-    title: 'This is a test title 2',
+    title: 'Adding end-to-end encryption to your app',
     description: 'An example of a short description.',
     createdAt: '2020-06-26T01:11:37.621Z',
     readingLength: '3 minutes',

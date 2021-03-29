@@ -3,6 +3,7 @@ import { jsx } from 'theme-ui';
 import Post from './Post';
 import PostAlt from './PostAlt';
 import PostAltAlt from './PostAltAlt';
+import PostAltAltAlt from './PostAltAltAlt';
 import { useParams } from 'react-router-dom';
 import posts from '../posts/posts';
 
@@ -39,7 +40,7 @@ const PostContainer = () => {
   console.log('time', post.createdAt);
   console.log('time processed', isoDateStringToLabel(post.createdAt));
   return (
-    <Post
+    <PostAltAltAlt
       title={post.title}
       content={post.content}
       tag={post.tag}

@@ -39,7 +39,8 @@ const RenderMarkdown = ({ content }) => {
               sx={{
                 clear: 'both',
                 maxWidth: blockType === 'wide' ? [650, 650, 'content'] : 650,
-                my: float ? [6, 6, 0] : [6, 6, 7],
+                my: float ? [6, 6, 0] : [6, 6, 6],
+
                 width: float ? ['100%', '100%', '460px'] : '100%',
                 mx: 'auto',
 
@@ -47,14 +48,18 @@ const RenderMarkdown = ({ content }) => {
                   mb: [6, 6, 4],
 
                   ...(float === 'right' && {
-                    pl: [0, 0, 7],
+                    pl: [0, 0, 6],
                   }),
                   ...(float === 'left' && {
-                    pr: [0, 0, 7],
+                    pr: [0, 0, 6],
                   }),
                 }),
 
                 float: float ? ['none', 'none', float] : 'none',
+
+                ':first-child': {
+                  mt: 0,
+                },
               }}
             >
               {/* Need to standardise image heights so lazy loader knows
@@ -163,7 +168,7 @@ const RenderMarkdown = ({ content }) => {
               <Image
                 src={src}
                 alt={alt}
-                sx={{ maxWidth: 'content', my: [6, 7], width: '100%' }}
+                sx={{ maxWidth: 'content', my: [6, 6], width: '100%' }}
               />
             </LazyLoader>
           );
@@ -174,7 +179,7 @@ const RenderMarkdown = ({ content }) => {
               sx={{
                 maxWidth: 698,
                 mx: 'auto',
-                my: [6, 7],
+                my: [6, 6],
                 width: '100%',
                 position: 'relative',
                 background: theme.colors.black,
