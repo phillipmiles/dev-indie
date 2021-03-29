@@ -136,7 +136,7 @@ export default {
 
       p: {
         mt: 0,
-        mb: 3,
+        mb: 4,
       },
 
       a: {
