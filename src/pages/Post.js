@@ -84,9 +84,9 @@ const Post = ({
           <Text>{readingLength}</Text>
         </Flex>
         {/* <Flex sx={{ flexDirection: 'column', alignItems: 'center', mb: 9 }}> */}
-        {/* <div sx={{ mb: 9 }}> */}
-        <RenderMarkdown content={content} />
-        {/* </div> */}
+        <div>
+          <RenderMarkdown content={content} />
+        </div>
         {/* </Flex> */}
       </ContentWrap>
       <ContentWrap maxWidth={650} sx={{ mb: 9 }}>
