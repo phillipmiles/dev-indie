@@ -38,7 +38,7 @@ const Blog = ({ posts }) => {
             tag={post.tag}
             timePublished={post.timePublished}
             readingLength={post.readingLength}
-            to={`${routeUrls.post(post.slug)}`}
+            to={`${routeUrls.post}/${post.slug}`}
             sx={{ mb: [6, 7] }}
           />
         ))}

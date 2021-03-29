@@ -3,7 +3,8 @@ const routeUrls = {
   blog: '/blog',
   projects: '/projects',
   about: '/about',
-  post: (id) => `/blog/${id ? id : ':id'}`,
+  post: '/blog',
+  // post: (id) => `/blog/post/${id ? id : ':id'}`,
 };
 
 export default routeUrls;

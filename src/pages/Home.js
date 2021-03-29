@@ -108,12 +108,12 @@ const Home = ({ posts }) => {
             tag={post.tag}
             timePublished={post.timePublished}
             readingLength={post.readingLength}
-            to={`${routeUrls.post(post.slug)}`}
+            to={`${routeUrls.post}/${post.slug}`}
             sx={{ mb: [6, 7] }}
           />
         ))}
         <div sx={{ textAlign: 'center', mt: 3, mb: 9 }}>
-          <ButtonText>Browse all posts</ButtonText>
+          <ButtonText to={routeUrls.blog}>Browse all posts</ButtonText>
         </div>
       </ContentWrap>
       <SubscribeContentBlock />

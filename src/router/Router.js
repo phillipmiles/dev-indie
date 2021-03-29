@@ -48,7 +48,7 @@ const Router = () => {
         <Route exact path={routeUrls.blog}>
           <Blog />
         </Route>
-        <Route path={`${routeUrls.blog}/:id`}>
+        <Route path={`${routeUrls.post}/:id`}>
           <Post />
         </Route>
         <Route path={routeUrls.projects}>
