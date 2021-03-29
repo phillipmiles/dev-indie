@@ -38,23 +38,23 @@ const RenderMarkdown = ({ content }) => {
             <div
               sx={{
                 clear: 'both',
-                maxWidth: blockType === 'wide' ? 'content' : 650,
-                my: float ? 0 : 7,
-                width: float ? '460px' : '100%',
+                maxWidth: blockType === 'wide' ? [650, 650, 'content'] : 650,
+                my: float ? [6, 6, 0] : [6, 6, 7],
+                width: float ? ['100%', '100%', '460px'] : '100%',
                 mx: 'auto',
 
                 ...(float && {
-                  mb: 4,
+                  mb: [6, 6, 4],
 
                   ...(float === 'right' && {
-                    pl: 7,
+                    pl: [0, 0, 7],
                   }),
                   ...(float === 'left' && {
-                    pr: 7,
+                    pr: [0, 0, 7],
                   }),
                 }),
 
-                float: float ? float : 'none',
+                float: float ? ['none', 'none', float] : 'none',
               }}
             >
               {/* Need to standardise image heights so lazy loader knows
@@ -90,8 +90,14 @@ const RenderMarkdown = ({ content }) => {
         h2: ({ id, children }) => (
           <Heading
             as="h2"
-            variant="heading4"
-            sx={{ margin: 'auto', maxWidth: 650, width: '100%', mb: 4, mt: 6 }}
+            sx={{
+              variant: ['text.heading5', 'text.heading4'],
+              margin: 'auto',
+              maxWidth: 650,
+              width: '100%',
+              mb: 4,
+              mt: 6,
+            }}
           >
             {children}
           </Heading>
@@ -123,10 +129,13 @@ const RenderMarkdown = ({ content }) => {
             return (
               <Paragraph
                 sx={{
-                  margin: 'auto',
+                  mx: 'auto',
                   maxWidth: 650,
                   width: '100%',
-                  ':first-of-type': { variant: 'text.callout', mb: 5 },
+                  ':first-of-type': {
+                    variant: ['text.body', 'text.callout'],
+                    mb: [4, 5],
+                  },
                   ':last-of-type': { mb: 0 },
                 }}
               >
@@ -154,7 +163,7 @@ const RenderMarkdown = ({ content }) => {
               <Image
                 src={src}
                 alt={alt}
-                sx={{ maxWidth: 'content', my: 7, width: '100%' }}
+                sx={{ maxWidth: 'content', my: [6, 7], width: '100%' }}
               />
             </LazyLoader>
           );
@@ -165,7 +174,7 @@ const RenderMarkdown = ({ content }) => {
               sx={{
                 maxWidth: 698,
                 mx: 'auto',
-                my: 7,
+                my: [6, 7],
                 width: '100%',
                 position: 'relative',
                 background: theme.colors.black,

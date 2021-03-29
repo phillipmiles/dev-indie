@@ -15,6 +15,7 @@ import ButtonText from '../components/ButtonText';
 import FontAwesomeIcon from '../components/FontAwesomeIcon';
 import { faArrowRight, faShare } from '@fortawesome/free-solid-svg-icons';
 import { faTwitter, faFacebook } from '@fortawesome/free-brands-svg-icons';
+import Nav from '../components/Nav';
 
 const Post = ({
   title,
@@ -27,67 +28,124 @@ const Post = ({
 }) => {
   return (
     <div>
-      <Header
+      {/* <Header
         sx={{ bg: 'black', minHeight: 500, color: 'white' }}
         logoVariant="simple"
-      >
-        <Flex sx={{ flexGrow: 1 }}>
-          <div
-            sx={{
-              width: '380px',
-              position: 'relative',
-              mt: 6,
-              mr: 7,
-              flexShrink: 0,
-            }}
-          >
-            <Image
-              src={thumbSrc}
-              sx={{
-                position: 'absolute',
-                bg: 'neutral.6',
-                borderRadius: 24,
-                borderStyle: 'solid',
-                borderWidth: 4,
-                borderColor: 'white',
-                // width: '25%',
-                width: '380px',
-                objectFit: 'cover',
-                height: 440,
-              }}
-            />
-          </div>
-
-          <Flex
-            sx={{ flexDirection: 'column', justifyContent: 'flex-end', pb: 7 }}
-          >
-            <Text variant="callout" sx={{ color: 'primaryLight', mb: 4 }}>
-              {tag}
-            </Text>
-            <Heading as="h1" variant="heading2">
-              {title}
-            </Heading>
-          </Flex>
-        </Flex>
-      </Header>
-      <ContentWrap>
-        <Flex
+      > */}
+      <header>
+        <div
           sx={{
-            color: 'neutral.7',
-            ml: '380px',
-            height: 8,
-            alignItems: 'center',
-            mb: 7,
+            minHeight: ['none', 512],
+            display: 'flex',
+            flexDirection: 'column',
+            position: 'relative',
           }}
         >
-          <Text sx={{ ml: 7, mr: 5 }}>{timePublished}</Text>
-          <Text>{readingLength}</Text>
-        </Flex>
-        {/* <Flex sx={{ flexDirection: 'column', alignItems: 'center', mb: 9 }}> */}
+          <div
+            sx={{
+              bg: 'black',
+              zIndex: -1,
+              height: [400, 512],
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              right: 0,
+            }}
+          />
+          <Nav invert logoVariant={'simple'} />
+
+          <ContentWrap sx={{ flexGrow: 1, color: ['black', 'white'] }}>
+            <Flex
+              sx={{
+                flexGrow: 1,
+                flexDirection: ['column', 'row'],
+              }}
+            >
+              <div
+                sx={{
+                  width: ['auto', '380px'],
+                  position: 'relative',
+                  mt: [2, 6],
+                  mr: [0, 5, 7],
+                  // ml: ['-4px', 0],
+                  flexShrink: 0,
+                }}
+              >
+                <Image
+                  src={thumbSrc}
+                  sx={{
+                    position: ['static', 'absolute'],
+                    bg: 'neutral.6',
+                    borderRadius: 24,
+                    borderStyle: 'solid',
+                    borderWidth: 4,
+                    borderColor: 'white',
+                    width: '100%',
+                    objectFit: 'cover',
+                    height: [355, 440],
+                  }}
+                />
+              </div>
+
+              <Flex
+                sx={{
+                  flexDirection: 'column',
+                  justifyContent: 'flex-end',
+                  pb: [3, 7],
+                  mt: 3,
+                }}
+              >
+                <Text
+                  sx={{
+                    variant: ['text.body', 'text.callout'],
+                    color: 'primaryLight',
+                    mb: [3, 4],
+                  }}
+                >
+                  {tag}
+                </Text>
+                <Heading
+                  as="h1"
+                  sx={{
+                    variant: [
+                      'text.heading4',
+                      'text.heading3',
+                      'text.heading2',
+                    ],
+                  }}
+                >
+                  {title}
+                </Heading>
+              </Flex>
+            </Flex>
+          </ContentWrap>
+        </div>
+        <ContentWrap>
+          <Flex
+            sx={{
+              color: 'neutral.7',
+              ml: [0, '380px'],
+              height: ['auto', 8],
+              alignItems: 'center',
+              mb: [4, 7],
+            }}
+          >
+            <Text
+              sx={{ variant: ['text.detail', 'text.body'], ml: [5, 7], mr: 5 }}
+            >
+              {timePublished}
+            </Text>
+            <Text sx={{ variant: ['text.detail', 'text.body'] }}>
+              {readingLength}
+            </Text>
+          </Flex>
+        </ContentWrap>
+      </header>
+      {/* </Header> */}
+      <ContentWrap>
         <div>
           <RenderMarkdown content={content} />
         </div>
-        {/* </Flex> */}
       </ContentWrap>
       <ContentWrap maxWidth={650} sx={{ mb: 9 }}>
         <Flex

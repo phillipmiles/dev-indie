@@ -23,11 +23,11 @@ const Nav = ({ invert, logoVariant }) => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        px: 6,
+        px: [4, 6],
         py: 3,
       }}
     >
-      <Link to={routeUrls.home}>
+      <Link to={routeUrls.home} sx={{ flexShrink: 0 }}>
         <Image
           src={
             invert
@@ -37,7 +37,7 @@ const Nav = ({ invert, logoVariant }) => {
               : imgLogoBlack
           }
           alt="Dev Indie logo"
-          sx={{ height: 74 }}
+          sx={{ height: [64, 74] }}
         />
       </Link>
       <div>
