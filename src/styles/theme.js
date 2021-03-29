@@ -137,6 +137,10 @@ export default {
         // Removes small bottom margin.
         display: 'block',
       },
+
+      pre: {
+        margin: 0,
+      },
     },
   },
   forms: {

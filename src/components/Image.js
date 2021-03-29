@@ -2,8 +2,20 @@
 import PropTypes from 'prop-types';
 import { jsx } from 'theme-ui';
 
-const Image = ({ alt, ...props }) => {
-  return <img {...props} alt={alt ? alt : ''} />;
+const Image = ({ src, alt, ...props }) => {
+  return (
+    <img
+      {...props}
+      sx={{
+        margin: 0,
+        minWidth: 0,
+        maxWidth: '100%',
+        height: 'auto',
+      }}
+      src={src}
+      alt={alt ? alt : ''}
+    />
+  );
 };
 
 Image.propTypes = {

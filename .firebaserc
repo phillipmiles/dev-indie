@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "dev-indie---dev",
+    "staging": "dev-indie---staging",
+    "prod": "dev-indie"
+  }
+}

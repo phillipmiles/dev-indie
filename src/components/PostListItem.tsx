@@ -5,6 +5,7 @@ import Image from './Image';
 import Paragraph from './Paragraph';
 import Text from './Text';
 import Link from './Link';
+import LazyLoader from '../components/LazyLoader';
 
 interface Props {
   title?: string;
@@ -32,16 +33,18 @@ const PostListItem = ({
         to={to}
         sx={{ mr: [0, 6], mb: [4, 0], borderRadius: 24, overflow: 'hidden' }}
       >
-        <Image
-          src={imageSrc}
-          alt={title}
-          sx={{
-            width: ['100%', '328px'],
-            height: '192px',
-            objectPosition: '50% 50%',
-            objectFit: 'cover',
-          }}
-        />
+        <LazyLoader height={192} offset={200}>
+          <Image
+            src={imageSrc}
+            alt={title}
+            sx={{
+              width: ['100%', '328px'],
+              height: '192px',
+              objectPosition: '50% 50%',
+              objectFit: 'cover',
+            }}
+          />
+        </LazyLoader>
       </Link>
       <Flex sx={{ justifyContent: 'center', flexDirection: 'column' }}>
         <Link to={to}>

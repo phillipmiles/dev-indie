@@ -14,6 +14,7 @@ import SubscribeForm from '../components/SubscribeForm';
 import SubscribeContentBlock from '../components/SubscribeContentBlock';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import LazyLoader from '../components/LazyLoader';
 
 const Home = ({ posts }) => {
   return (
@@ -42,6 +43,7 @@ const Home = ({ posts }) => {
                 top: -16,
                 right: 0,
                 height: '112%',
+                maxWidth: 'none',
               }}
             />
           </div>
@@ -68,7 +70,9 @@ const Home = ({ posts }) => {
         <Flex
           sx={{ bg: 'neutral.8', borderRadius: 24, overflow: 'hidden', mb: 8 }}
         >
-          <Image src={imgProjectsThumb} sx={{ width: '50%' }} alt="" />
+          <LazyLoader height={468} sx={{ width: '50%' }}>
+            <Image src={imgProjectsThumb} alt="" />
+          </LazyLoader>
           <Flex
             sx={{
               p: 6,

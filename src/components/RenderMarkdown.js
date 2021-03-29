@@ -1,15 +1,32 @@
 /** @jsx jsx */
 import PropTypes from 'prop-types';
-import { jsx } from 'theme-ui';
+import { jsx, useThemeUI } from 'theme-ui';
 import marksy from 'marksy';
 import { useEffect, useState, createElement } from 'react';
 import Paragraph from './Paragraph';
 import Image from './Image';
 import Heading from './Heading';
+import Text from './Text';
+import LazyLoader from './LazyLoader';
+
+// XXX Parcel v1 is once again having troubles with it's imports. Should be fixed
+// in Parcel v2. Current work around is to directly import from the common js module.
+// See... https://github.com/react-syntax-highlighter/react-syntax-highlighter/issues/180
+import SyntaxHighlighter from 'react-syntax-highlighter/dist/cjs/prism-light';
+// import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
+import codeLangJsx from 'react-syntax-highlighter/dist/esm/languages/prism/jsx';
+import prism from 'react-syntax-highlighter/dist/esm/styles/prism/prism';
+
+console.log(prism);
+
+SyntaxHighlighter.registerLanguage('jsx', codeLangJsx);
 
 const RenderMarkdown = ({ content }) => {
   const [parsedMarkdown, setParsedMarkdown] = useState();
-  console.log(content);
+
+  const context = useThemeUI();
+  const { theme, components, colorMode, setColorMode } = context;
+
   useEffect(() => {
     const compile = marksy({
       // Pass in whatever creates elements for your
@@ -21,7 +38,7 @@ const RenderMarkdown = ({ content }) => {
             <div
               sx={{
                 clear: 'both',
-                maxWidth: blockType === 'wide' ? content : 650,
+                maxWidth: blockType === 'wide' ? 'content' : 650,
                 my: float ? 0 : 7,
                 width: float ? '460px' : '100%',
                 mx: 'auto',
@@ -40,7 +57,11 @@ const RenderMarkdown = ({ content }) => {
                 float: float ? float : 'none',
               }}
             >
-              <Image src={src} alt={alt} sx={{ width: '100%' }} />
+              {/* Need to standardise image heights so lazy loader knows
+              what to do and to avoid content layout shifts. */}
+              <LazyLoader height={200}>
+                <Image src={src} alt={alt} sx={{ width: '100%' }} />
+              </LazyLoader>
               {caption && (
                 <div
                   sx={{
@@ -105,7 +126,7 @@ const RenderMarkdown = ({ content }) => {
                   maxWidth: 650,
                   width: '100%',
                   mb: 4,
-                  ':first-child': { variant: 'text.callout', mb: 5 },
+                  ':first-of-type': { variant: 'text.callout', mb: 5 },
                 }}
               >
                 {children}
@@ -128,14 +149,172 @@ const RenderMarkdown = ({ content }) => {
         del({ children }) { },
         img({ src, alt }) {
           return (
-            <Image
-              src={src}
-              alt={alt}
-              sx={{ maxWidth: 'content', my: 7, width: '100%' }}
-            />
+            <LazyLoader>
+              <Image
+                src={src}
+                alt={alt}
+                sx={{ maxWidth: 'content', my: 7, width: '100%' }}
+              />
+            </LazyLoader>
           );
         },
-        code({ language, code }) { },
+        code({ language, code }) {
+          return (
+            <div
+              sx={{
+                maxWidth: 698,
+                mx: 'auto',
+                my: 7,
+                width: '100%',
+                position: 'relative',
+                background: theme.colors.black,
+                borderRadius: 8,
+              }}
+            >
+              <Text
+                sx={{ position: 'absolute', top: 2, right: 4, color: 'white' }}
+              >
+                {language}
+              </Text>
+              <SyntaxHighlighter
+                language={language}
+                style={{
+                  ...prism,
+                  ...{
+                    atrule: {
+                      color: 'red',
+                    },
+                    'attr-name': {
+                      // color: 'white',
+                      color: '#0087FE',
+                    },
+                    'attr-value': {
+                      color: 'red',
+                    },
+
+                    // italic: {
+
+                    // },
+                    // bold: {
+
+                    // },
+                    doctype: {
+                      color: 'red',
+                    },
+                    // Brackets and semicolans
+                    punctuation: {
+                      color: theme.colors.white,
+                    },
+                    regex: {
+                      color: 'red',
+                    },
+                    cdata: {
+                      color: 'red',
+                    },
+                    char: {
+                      color: 'red',
+                    },
+                    symbol: {
+                      color: 'red',
+                    },
+                    inserted: {
+                      color: 'red',
+                    },
+                    'class-name': {
+                      color: '#15D1AF',
+                    },
+                    keyword: {
+                      // color: '#F479FF',
+                      // color: '#0087FE',
+                      color: theme.colors.primary,
+                    },
+                    namespace: {
+                      color: 'red',
+                    },
+                    builtin: {
+                      color: 'red',
+                    },
+                    prolog: {
+                      color: 'red',
+                    },
+                    url: {
+                      color: 'red',
+                    },
+                    property: {
+                      color: 'red',
+                    },
+                    deleted: {
+                      color: 'red',
+                    },
+                    // html tag
+                    tag: {
+                      color: '#00C2FF',
+                      // color: theme.colors.primaryLight,
+                    },
+                    selector: {
+                      color: 'red',
+                    },
+                    entity: {
+                      color: 'red',
+                    },
+                    important: {
+                      color: 'red',
+                    },
+                    constant: {
+                      color: 'red',
+                    },
+                    boolean: {
+                      color: '#00C2FF',
+                    },
+                    string: {
+                      color: '#F34E5F',
+                    },
+                    number: {
+                      color: '#F479FF',
+                      // color: '#FFEF64',
+                    },
+                    function: {
+                      color: '#FFEF64',
+                      // color: theme.colors.secondary,
+                    },
+                    variable: {
+                      color: 'red',
+                    },
+                    comment: {
+                      color: '#009C48',
+                    },
+                    operator: {
+                      color: theme.colors.white,
+                    },
+                    'pre[class*="language-"]': {
+                      ...prism['pre[class*="language-"]'],
+                      background: 'transparent',
+                      // color: theme.colors.white,
+                      color: '#00F0FF',
+                      textShadow: 'none',
+                      padding: 24,
+                      margin: 0,
+                    },
+                    'code[class*="language-"]': {
+                      ...prism['code[class*="language-"]'],
+                      // color: theme.colors.white,
+                      color: '#00F0FF',
+                      textShadow: 'none',
+                      fontSize: '16px',
+                    },
+                  },
+                }}
+              >
+                {code}
+              </SyntaxHighlighter>
+            </div>
+          );
+          // return (
+          //   <pre sx={{ maxWidth: 650, mx: 'auto', width: '100%' }}>
+          //     <code>{code}</code>
+          //   </pre>
+          // );
+        },
         codespan({ children }) { },
       },
     });

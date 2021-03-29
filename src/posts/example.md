@@ -50,3 +50,54 @@ People took chances on me. Still, I hope that sharing my story can be helpful to
 I was born in Russia and I finished the high school there in 2009. In Russia, higher education is free if you do well enough at tests. I tried my chances with a few colleges. I was particularly hoping to get into one college whose students often won programming competitions (which I thought was cool at the time).
 
 People took chances on me. Still, I hope that sharing my story can be helpful to compare our experiences. Even if our circumstances are too different, at least you might find some of it entertaining.
+
+```jsx
+const hello = () => {
+  return 'hello world';
+}
+
+console.log(hello());
+
+const testingAReallyLongVariableName = 'Here is a really long string to go with it';
+
+const Test = () => {
+  const [value, setValue] = useState(false);
+
+  useEffect(() => {
+    var sum = 1 + 12;
+    console.log("Test");
+  }, [value]);
+
+  return (
+    <div>
+      <OtherComponent propery={true} />
+      <Image
+        src={imageSrc}
+        alt={title}
+        sx={{
+          width: ['100%', '328px'],
+          height: '192px',
+          objectPosition: '50% 50%',
+          objectFit: 'cover',
+        }}
+      />
+    </div>
+  )
+
+  export const setAuthUser = (user) => {
+    // Set user id for analytics
+    if (user && user.uid) {
+      setUserId(user.uid);
+    }
+  }
+
+  const apple = () => {
+    transform('colorValue');
+    return orange;
+  }
+}
+// Prints 'hello world'
+```
+I was born in Russia and I finished the high school there in 2009. In Russia, higher education is free if you do well enough at tests. I tried my chances with a few colleges. I was particularly hoping to get into one college whose students often won programming competitions (which I thought was cool at the time).
+
+People took chances on me. Still, I hope that sharing my story can be helpful to compare our experiences. Even if our circumstances are too different, at least you might find some of it entertaining.
