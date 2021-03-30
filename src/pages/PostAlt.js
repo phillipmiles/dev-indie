@@ -90,7 +90,7 @@ const Post = ({
         </Flex>
       </Flex>
       <ContentWrap>
-        {/* <div sx={{ margin: 'auto', maxWidth: 650, width: '100%', mt: 6 }}>
+        {/* <div sx={{ margin: 'auto', maxWidth: 'contentSmall', width: '100%', mt: 6 }}>
           <Text variant="callout" sx={{ color: 'primaryLight', mb: 4 }}>
             {tag}
           </Text>

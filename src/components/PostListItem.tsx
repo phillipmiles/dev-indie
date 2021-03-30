@@ -31,7 +31,13 @@ const PostListItem = ({
     <Flex {...props} sx={{ flexDirection: ['column', 'row'] }}>
       <Link
         to={to}
-        sx={{ mr: [0, 6], mb: [4, 0], borderRadius: 24, overflow: 'hidden' }}
+        sx={{
+          mr: [0, 6],
+          mb: [4, 0],
+          borderRadius: 24,
+          overflow: 'hidden',
+          flexShrink: 0,
+        }}
       >
         <LazyLoader height={192} offset={200}>
           <Image
@@ -59,7 +65,7 @@ const PostListItem = ({
           </Heading>
           <Paragraph sx={{ mb: [2, 3] }}>{description}</Paragraph>
         </Link>
-        <Flex sx={{ color: 'neutral.6' }}>
+        <Flex sx={{ color: 'neutral.7' }}>
           <Text variant="detail" sx={{ mr: 4, fontWeight: 'bold' }}>
             {tag}
           </Text>

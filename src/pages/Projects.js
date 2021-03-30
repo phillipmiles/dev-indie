@@ -23,7 +23,7 @@ const Projects = ({ posts }) => {
             pb: 7,
           }}
         >
-          <Heading as="h1" variant="heading2">
+          <Heading as="h1" variant="heading1">
             Projects
           </Heading>
         </Flex>

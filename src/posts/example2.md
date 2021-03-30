@@ -1,12 +1,5 @@
 # This is a test title
 
-```marksy
-  h(Image, { 
-    alt: '', 
-    caption: 'Photo: Getty Images',
-    src: 'https://images.unsplash.com/photo-1616946893773-ea1e4ec0a7ef?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'})
-```
-
 This is an example file where I would be writing and editing the content of a blog post completly ignoring **how** it will be rendered in the final app. This is just about content only.
 
 I’ve told bits and pieces of my story on different podcasts. Now feels like an appropriate time to write down the parts that were most memorable to me.

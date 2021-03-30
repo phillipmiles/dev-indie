@@ -2,10 +2,17 @@
 import PropTypes from 'prop-types';
 import { jsx } from 'theme-ui';
 import Link from './Link';
+import { NavLink } from 'react-router-dom';
 
 const NavItem = ({ to, onClick, ...props }) => {
-
-  return <Link {...props} to={to} sx={{ textDecoration: 'none' }}></Link>
+  return (
+    <NavLink
+      {...props}
+      to={to}
+      sx={{ textDecoration: 'none' }}
+      activeStyle={{ textDecoration: 'underline' }}
+    ></NavLink>
+  );
 };
 
 NavItem.propTypes = {

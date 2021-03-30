@@ -40,47 +40,74 @@ const Post = ({
           flexDirection: 'column',
         }}
       >
-        <Nav invert />
+        <Nav
+          invert
+        // logoVariant="primary"
+        />
 
-        <ContentWrap maxWidth={650} sx={{ color: 'white', flexGrow: 1 }}>
+        <ContentWrap
+          maxWidth={'contentSmall'}
+          sx={{ color: 'white', flexGrow: 1 }}
+        >
           <Flex
             sx={{
               justifyContent: 'center',
-              alignItems: 'center',
+              // alignItems: 'center',
               flexGrow: 1,
               flexDirection: 'column',
+              // textAlign: 'center',
             }}
           >
-            <Text
-              sx={{
-                variant: ['text.body', 'text.callout'],
-
-                mb: [3, 4],
-              }}
-            >
-              {tag}
-            </Text>
+            <div sx={{ mb: [3, 4] }}>
+              <Text
+                variant="detail"
+                sx={{
+                  // display: 'block',
+                  bg: 'secondary',
+                  color: 'primary',
+                  // variant: ['text.body', 'text.body'],
+                  px: 2,
+                  py: 1,
+                  // mb: [3, 4],
+                }}
+              >
+                {tag}
+              </Text>
+            </div>
             <Heading
               as="h1"
               sx={{
-                textAlign: 'center',
+                // textAlign: 'center',
                 variant: ['text.heading4', 'text.heading3', 'text.heading2'],
               }}
             >
               {title}
             </Heading>
-            <Flex
+            <Paragraph
+              variant="callout"
               sx={{
-                color: 'neutral.9',
-                height: ['auto', 8],
-                alignItems: 'center',
-                // mb: [4, 7],
+                mt: 5,
+                //textAlign: 'center'
+                opacity: 0.9,
               }}
             >
-              <Text sx={{ variant: ['text.detail', 'text.body'], mx: 3 }}>
+              Exploring stacking contexts, one of the most misunderstood
+              mechanisms in CSS.
+            </Paragraph>
+            <Flex
+              sx={{
+                // color: 'neutral.9',
+                // height: ['auto', 8],
+                alignItems: 'center',
+                // justifyContent: 'center',
+                // mb: [4, 7],
+                // mt: 2,
+              }}
+            >
+              <Text sx={{ variant: ['text.detail', 'text.detail'], mr: 3 }}>
                 {timePublished}
               </Text>
-              <Text sx={{ variant: ['text.detail', 'text.body'], mx: 3 }}>
+              <Text sx={{ variant: ['text.detail', 'text.detail'], mx: 3 }}>
                 {readingLength} read
               </Text>
             </Flex>
@@ -93,7 +120,7 @@ const Post = ({
           <RenderMarkdown content={content} />
         </div>
       </ContentWrap>
-      <ContentWrap maxWidth={650} sx={{ mb: 9 }}>
+      <ContentWrap maxWidth={'contentSmall'} sx={{ mb: 9 }}>
         <Flex
           sx={{
             my: 6,

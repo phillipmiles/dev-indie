@@ -49,7 +49,7 @@ const Post = ({
                 // pt: 6,
                 // pr: 9,
                 // pl: 8,
-                maxWidth: 650,
+                maxWidth: 'contentSmall',
                 width: '100%',
                 margin: 'auto',
               }}
@@ -70,7 +70,7 @@ const Post = ({
           sx={{
             color: 'neutral.7',
             // ml: '380px',
-            maxWidth: '650',
+            maxWidth: 'contentSmall',
             width: '100%',
             margin: 'auto',
             height: 8,
@@ -81,7 +81,7 @@ const Post = ({
           <Text sx={{ mr: 5 }}>{timePublished}</Text>
           <Text>{readingLength}</Text>
         </Flex>
-        {/* <div sx={{ margin: 'auto', maxWidth: 650, width: '100%', mt: 6 }}>
+        {/* <div sx={{ margin: 'auto', maxWidth: 'contentSmall', width: '100%', mt: 6 }}>
           <Text variant="callout" sx={{ color: 'primaryLight', mb: 4 }}>
             {tag}
           </Text>

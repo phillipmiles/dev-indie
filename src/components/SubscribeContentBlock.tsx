@@ -38,7 +38,7 @@ const SubscribeContentBlock = ({
       }}
     >
       <Flex sx={{ justifyContent: 'center' }}>
-        <div sx={{ maxWidth: '650px' }}>
+        <div sx={{ maxWidth: 'contentSmall' }}>
           <Paragraph
             variant="callout"
             sx={{ mb: 5, textAlign: ['center', 'left'] }}

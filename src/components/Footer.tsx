@@ -23,7 +23,7 @@ const Footer = ({ ...props }: Props): JSX.Element => {
       sx={{
         bg: 'black',
         color: 'white',
-        py: [6, 8],
+        py: [6, 7],
       }}
     >
       <Flex

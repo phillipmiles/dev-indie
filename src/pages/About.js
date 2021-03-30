@@ -58,7 +58,7 @@ const About = ({ posts }) => {
       </Header>
 
       <ContentWrap sx={{ mt: 8, mb: 9 }}>
-        <div sx={{ maxWidth: '650px', width: '100%' }}>
+        <div sx={{ maxWidth: 'contentSmall', width: '100%' }}>
           <Paragraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
             porttitor eros nec erat elementum, id pulvinar erat porta. Donec

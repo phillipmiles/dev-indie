@@ -16,7 +16,7 @@ export default {
     12: 360,
     13: 512,
     14: 928,
-    // contentSmall: 1024,
+    contentSmall: 664,
     content: 1080,
   },
   fonts: {
@@ -25,7 +25,7 @@ export default {
     // Menlo is a nice backup shipped with Mac OSX Snow Leopard only.
     monospace: 'source-code-pro, Menlo, monospace',
   },
-  fontSizes: [13.5, 18, 23.99, 31.98, 42.63, 56.83, 75.76],
+  fontSizes: [15.2, 19, 23.75, 29.69, 39.11, 46.39, 57.98, 72.48],
   fontWeights: {
     regular: 400,
     bold: 700,
@@ -33,7 +33,7 @@ export default {
   lineHeights: {
     none: 1,
     tight: 1.125,
-    normal: 1.5,
+    normal: 1.6,
   },
   // letterSpacings: {
   //   body: 'normal',
@@ -136,7 +136,7 @@ export default {
 
       p: {
         mt: 0,
-        mb: 4,
+        mb: 5,
       },
 
       a: {

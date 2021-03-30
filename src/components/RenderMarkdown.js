@@ -38,7 +38,10 @@ const RenderMarkdown = ({ content }) => {
             <div
               sx={{
                 clear: 'both',
-                maxWidth: blockType === 'wide' ? [650, 650, 'content'] : 650,
+                maxWidth:
+                  blockType === 'wide'
+                    ? ['contentSmall', 'contentSmall', 'content']
+                    : 'contentSmall',
                 my: float ? [6, 6, 0] : [6, 6, 6],
 
                 width: float ? ['100%', '100%', '460px'] : '100%',
@@ -64,7 +67,14 @@ const RenderMarkdown = ({ content }) => {
             >
               {/* Need to standardise image heights so lazy loader knows
               what to do and to avoid content layout shifts. */}
-              <LazyLoader height={200}>
+              <LazyLoader
+                height={200}
+                placeholder={
+                  <div
+                    sx={{ width: '100%', height: '100%', bg: 'neutral.8' }}
+                  />
+                }
+              >
                 <Image src={src} alt={alt} sx={{ width: '100%' }} />
               </LazyLoader>
               {caption && (
@@ -98,7 +108,7 @@ const RenderMarkdown = ({ content }) => {
             sx={{
               variant: ['text.heading5', 'text.heading4'],
               margin: 'auto',
-              maxWidth: 650,
+              maxWidth: 'contentSmall',
               width: '100%',
               mb: 4,
               mt: 6,
@@ -108,7 +118,21 @@ const RenderMarkdown = ({ content }) => {
           </Heading>
         ),
 
-        h3({ id, children }) { },
+        h3: ({ id, children }) => (
+          <Heading
+            as="h2"
+            sx={{
+              variant: ['text.heading6', 'text.heading5'],
+              margin: 'auto',
+              maxWidth: 'contentSmall',
+              width: '100%',
+              mb: 4,
+              mt: 6,
+            }}
+          >
+            {children}
+          </Heading>
+        ),
         h4({ id, children }) { },
         blockquote({ children }) { },
         hr() { },
@@ -135,7 +159,7 @@ const RenderMarkdown = ({ content }) => {
               <Paragraph
                 sx={{
                   mx: 'auto',
-                  maxWidth: 650,
+                  maxWidth: 'contentSmall',
                   width: '100%',
                   ':first-of-type': {
                     variant: ['text.body', 'text.callout'],
@@ -177,17 +201,18 @@ const RenderMarkdown = ({ content }) => {
           return (
             <div
               sx={{
-                maxWidth: 698,
+                maxWidth: 728,
                 mx: 'auto',
                 my: [6, 6],
                 width: '100%',
                 position: 'relative',
                 background: theme.colors.black,
+                // bg: 'rgb(242, 246, 255)',
                 borderRadius: 8,
               }}
             >
               <Text
-                sx={{ position: 'absolute', top: 2, right: 4, color: 'white' }}
+                sx={{ position: 'absolute', top: 2, right: 5, color: 'white' }}
               >
                 {language}
               </Text>
@@ -307,7 +332,7 @@ const RenderMarkdown = ({ content }) => {
                       // color: theme.colors.white,
                       color: '#00F0FF',
                       textShadow: 'none',
-                      padding: 24,
+                      padding: 32,
                       margin: 0,
                     },
                     'code[class*="language-"]': {
@@ -325,7 +350,7 @@ const RenderMarkdown = ({ content }) => {
             </div>
           );
           // return (
-          //   <pre sx={{ maxWidth: 650, mx: 'auto', width: '100%' }}>
+          //   <pre sx={{ maxWidth: 'contentSmall', mx: 'auto', width: '100%' }}>
           //     <code>{code}</code>
           //   </pre>
           // );

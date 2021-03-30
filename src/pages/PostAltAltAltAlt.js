@@ -32,117 +32,94 @@ const Post = ({
         sx={{ bg: 'black', minHeight: 500, color: 'white' }}
         logoVariant="simple"
       > */}
-      <header>
-        <div
-          sx={{
-            minHeight: ['none', 512],
-            display: 'flex',
-            flexDirection: 'column',
-            position: 'relative',
-          }}
+      <header
+        sx={{
+          height: 412,
+          bg: 'primary',
+          display: 'flex',
+          flexDirection: 'column',
+        }}
+      >
+        <Nav
+          invert
+        // logoVariant="primary"
+        />
+
+        <ContentWrap
+          maxWidth={'contentSmall'}
+          sx={{ color: 'white', flexGrow: 1 }}
         >
-          <div
-            sx={{
-              bg: 'black',
-              zIndex: -1,
-              height: [400, 512],
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              right: 0,
-            }}
-          />
-          <Nav invert logoVariant={'simple'} />
-
-          <ContentWrap sx={{ flexGrow: 1, color: ['black', 'white'] }}>
-            <Flex
-              sx={{
-                flexGrow: 1,
-                flexDirection: ['column', 'row'],
-              }}
-            >
-              <div
-                sx={{
-                  width: ['auto', '380px'],
-                  position: 'relative',
-                  mt: [2, 6],
-                  mr: [0, 5, 7],
-                  // ml: ['-4px', 0],
-                  flexShrink: 0,
-                }}
-              >
-                <Image
-                  src={thumbSrc}
-                  sx={{
-                    position: ['static', 'absolute'],
-                    bg: 'neutral.6',
-                    borderRadius: 24,
-                    borderStyle: 'solid',
-                    borderWidth: 4,
-                    borderColor: 'white',
-                    width: '100%',
-                    objectFit: 'cover',
-                    height: [355, 440],
-                  }}
-                />
-              </div>
-
-              <Flex
-                sx={{
-                  flexDirection: 'column',
-                  justifyContent: 'flex-end',
-                  pb: [3, 7],
-                  mt: 3,
-                }}
-              >
-                <Text
-                  sx={{
-                    variant: ['text.body', 'text.callout'],
-                    color: 'primaryLight',
-                    mb: [3, 4],
-                  }}
-                >
-                  {tag}
-                </Text>
-                <Heading
-                  as="h1"
-                  sx={{
-                    variant: [
-                      'text.heading4',
-                      'text.heading3',
-                      'text.heading2',
-                    ],
-                  }}
-                >
-                  {title}
-                </Heading>
-              </Flex>
-            </Flex>
-          </ContentWrap>
-        </div>
-        <ContentWrap>
           <Flex
             sx={{
-              color: 'neutral.7',
-              ml: [0, '380px'],
-              height: ['auto', 8],
-              alignItems: 'center',
-              mb: [4, 7],
+              justifyContent: 'center',
+              // alignItems: 'center',
+              flexGrow: 1,
+              flexDirection: 'column',
+              // textAlign: 'center',
             }}
           >
-            <Text
-              sx={{ variant: ['text.detail', 'text.body'], ml: [5, 7], mr: 5 }}
+            <div sx={{ mb: [3, 4] }}>
+              <Text
+                variant="detail"
+                sx={{
+                  // display: 'block',
+                  bg: 'secondary',
+                  color: 'primary',
+                  // variant: ['text.body', 'text.body'],
+                  px: 2,
+                  py: 1,
+                  // mb: [3, 4],
+                }}
+              >
+                {tag}
+              </Text>
+            </div>
+            <Heading
+              as="h1"
+              sx={{
+                // textAlign: 'center',
+                variant: ['text.heading4', 'text.heading3', 'text.heading2'],
+              }}
             >
-              {timePublished}
-            </Text>
-            <Text sx={{ variant: ['text.detail', 'text.body'] }}>
-              {readingLength}
-            </Text>
+              {title}
+            </Heading>
           </Flex>
         </ContentWrap>
       </header>
-      {/* </Header> */}
+
       <ContentWrap>
+        <div sx={{ maxWidth: 'contentSmall', margin: 'auto', width: '100%' }}>
+          <Paragraph
+            variant="callout"
+            sx={{
+              mt: 5,
+              //textAlign: 'center'
+              opacity: 0.9,
+            }}
+          >
+            Exploring stacking contexts, one of the most misunderstood
+            mechanisms in CSS.
+          </Paragraph>
+          <Flex
+            sx={{
+              // color: 'neutral.9',
+              // height: ['auto', 8],
+              alignItems: 'center',
+              // justifyContent: 'center',
+              // mb: [4, 7],
+              // mt: 2,
+            }}
+          >
+            <Text sx={{ variant: ['text.detail', 'text.detail'], mr: 3 }}>
+              {timePublished}
+            </Text>
+            <Text sx={{ variant: ['text.detail', 'text.detail'], mx: 3 }}>
+              {readingLength} read
+            </Text>
+          </Flex>
+        </div>
+      </ContentWrap>
+      <ContentWrap sx={{ mt: 7 }}>
         <div>
           <RenderMarkdown content={content} />
         </div>
