@@ -10,7 +10,7 @@ const posts = [
     createdAt: '2020-06-26T01:11:37.621Z',
     readingLength: '3 minutes',
     tag: 'Tips & Tricks',
-    type: 'custom',
+    type: 'custom2',
     topics: [
       {
         title: 'React',
@@ -25,8 +25,7 @@ const posts = [
         count: 3,
       },
     ],
-    thumbSrc:
-      'https://images.unsplash.com/photo-1616707478468-4b0fa44df4e6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+    thumbSrc: 'https://www.lapa.ninja/assets/blog/blush.jpg',
     content: {
       type: 'text',
       content: example2,
@@ -56,7 +55,7 @@ const posts = [
       },
     ],
     thumbSrc:
-      'https://cdn.vox-cdn.com/thumbor/GF6TYwOOhULSBXHmTPLjvz09MpU=/0x0:1920x1080/3070x1727/filters:focal(804x177:1110x483):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/69029891/hitman_3_key_art_red_background_1920.0.jpg',
+      'https://uploads-ssl.webflow.com/5f3fdb4ac2968afe2a89c98b/5fdb6b9cf7c801862c27cbbd_Blog%20_%20Cover%20_%20Gender%20Design%20Header%202.png',
     content: {
       type: 'text',
       content: example2,
@@ -197,6 +196,36 @@ const posts = [
     ],
     thumbSrc:
       'https://figma.imgix.net/LcuG2N2IA33kK8Z63TrtJ/23c7adc820fae0b075ec4fa5d301ecfb/BlogHeader-AutoSave.png?&w=2120&auto=compress%2Cformat&crop=entropy&fit=crop&q=75',
+    content: {
+      type: 'text',
+      content: example2,
+    },
+  },
+  {
+    slug: 'test-post-7',
+    title: 'Adding end-to-end encryption to your app',
+    description:
+      'Exploring stacking contexts, one of the most misunderstood mechanisms in CSS.',
+    createdAt: '2020-06-26T01:11:37.621Z',
+    readingLength: '3 minutes',
+    tag: 'Tips & Tricks',
+    type: 'custom2',
+    topics: [
+      {
+        title: 'React',
+        count: 12,
+      },
+      {
+        title: 'Thought Stream',
+        count: 3,
+      },
+      {
+        title: 'Cryptography',
+        count: 3,
+      },
+    ],
+    thumbSrc:
+      'https://uploads-ssl.webflow.com/5f3fdb4ac2968afe2a89c98b/5fdb6b9cf7c801862c27cbbd_Blog%20_%20Cover%20_%20Gender%20Design%20Header%202.png',
     content: {
       type: 'text',
       content: example2,
