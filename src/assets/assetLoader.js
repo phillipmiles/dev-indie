@@ -30,6 +30,9 @@ import imgProjectsThumbImport from './projects-thumb.png';
 import imgAvatarImport from './avatar.jpg';
 import imgTestImport from './test.png';
 import imgLogoPrimaryImport from './brand/logo/logo-primary.png';
+import imgLogoTestImport from './logotest.png';
+import imgLogoTest2Import from './logotest2.png';
+import imgBlankImport from './blank.png';
 
 // XXX: Should all images be imported from this location rather then direct imports
 // to avoid file name changes stuffing up file paths in multiple locations?
@@ -40,3 +43,6 @@ export const imgLogoWhite = imgLogoWhiteImport;
 export const imgLogoPrimary = imgLogoPrimaryImport;
 export const imgProjectsThumb = imgProjectsThumbImport;
 export const imgAvatar = imgAvatarImport;
+export const imgLogoTest = imgLogoTestImport;
+export const imgLogoTest2 = imgLogoTest2Import;
+export const imgBlank = imgBlankImport;

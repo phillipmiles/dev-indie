@@ -10,39 +10,54 @@ import routeUrls from '../router/routeUrls';
 import ContentWrap from '../components/ContentWrap';
 import SubscribeContentBlock from '../components/SubscribeContentBlock';
 import Footer from '../components/Footer';
+import ContentBorder from '../components/ContentBorder';
+import Nav from '../components/Nav';
+import ProjectCard from '../components/ProjectCard';
 
-const Projects = ({ posts }) => {
+const Projects = ({ projects }) => {
   return (
     <div>
-      <Header sx={{ color: 'white', minHeight: 400 }}>
-        <Flex
-          sx={{
-            flexGrow: 1,
-            justifyContent: 'flex-end',
-            flexDirection: 'column',
-            pb: 7,
-          }}
-        >
-          <Heading as="h1" variant="heading1">
-            Projects
-          </Heading>
-        </Flex>
-      </Header>
-      <ContentWrap sx={{ mt: 8, mb: 9 }}>
-        {/* {posts.map((post) => (
-          <PostListItem
-            key={post.slug}
-            title={post.title}
-            description={post.description}
-            imageSrc={post.thumbSrc}
-            tag={post.tag}
-            timePublished={post.timePublished}
-            readingLength={post.readingLength}
-            to={`${routeUrls.post}/${post.slug}`}
-            sx={{ mb: [6, 7] }}
-          />
-        ))} */}
-      </ContentWrap>
+      <header>
+        <ContentBorder left right>
+          <Nav />
+        </ContentBorder>
+      </header>
+      <ContentBorder left right>
+        <ContentWrap sx={{ pt: 8 }}>
+          <div sx={{ width: '60%', mb: 6 }}>
+            <Heading as="h1" variant="heading2" sx={{ mb: 5 }}>
+              Real apps, transparently developed.
+            </Heading>
+            <Paragraph sx={{ mb: 8 }}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+              eros velit, sollicitudin vel gravida sit amet, gravida eget
+              sapien. Proin tellus lorem, rhoncus eu pharetra non, dapibus a
+              nisl. Fusce aliquam nisi ut nunc suscipit sollicitudin.
+            </Paragraph>
+          </div>
+        </ContentWrap>
+        <ContentWrap maxWidth={1144}>
+          {projects &&
+            projects.map((project) => (
+              <ProjectCard
+                sx={{ mb: 8 }}
+                key={project.slug}
+                url={project.slug}
+                title={project.title}
+                description={project.description}
+                srcThumb={project.srcThumb}
+                platforms={project.platforms}
+                stack={project.stack}
+              />
+            ))}
+        </ContentWrap>
+        <ContentWrap sx={{ pb: 9, textAlign: 'center', color: 'neutral.7' }}>
+          <Paragraph>
+            More ideas are{' '}
+            <span sx={{ fontStyle: 'italic', mb: 6 }}>simmering...</span>
+          </Paragraph>
+        </ContentWrap>
+      </ContentBorder>
       <SubscribeContentBlock />
       <Footer />
     </div>
@@ -50,7 +65,11 @@ const Projects = ({ posts }) => {
 };
 
 Projects.propTypes = {
-  posts: PropTypes.array,
+  projects: PropTypes.array,
+};
+
+Projects.defaultProps = {
+  projects: [],
 };
 
 export default Projects;

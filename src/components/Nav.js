@@ -8,6 +8,8 @@ import {
   imgLogoBlack,
   imgLogoPrimary,
   imgLogoWhite,
+  imgLogoTest,
+  imgLogoTest2,
 } from '../assets/assetLoader';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -30,7 +32,7 @@ const Nav = ({ invert, logoVariant, ...props }) => {
       }}
     >
       <Link to={routeUrls.home} sx={{ flexShrink: 0 }}>
-        <Text
+        {/* <Text
           sx={{
             variant: 'text.heading4',
             // fontFamily: 'Filson Soft',
@@ -68,7 +70,8 @@ const Nav = ({ invert, logoVariant, ...props }) => {
           >
             Indie
           </span>
-        </Text>
+        </Text> */}
+        <Image src={imgLogoTest2} alt="Dev Indie logo" sx={{ height: 36 }} />
         {/* <Image
           src={
             invert
@@ -84,13 +87,13 @@ const Nav = ({ invert, logoVariant, ...props }) => {
         /> */}
       </Link>
       <div sx={{ py: 3 }}>
-        <NavItem to={routeUrls.blog} sx={{ px: 4, color: textColor }}>
+        <NavItem to={routeUrls.blog} sx={{ mx: 4, color: textColor }}>
           Blog
         </NavItem>
-        <NavItem to={routeUrls.projects} sx={{ px: 4, color: textColor }}>
+        <NavItem to={routeUrls.projects} sx={{ mx: 4, color: textColor }}>
           Projects
         </NavItem>
-        <NavItem to={routeUrls.about} sx={{ px: 4, color: textColor }}>
+        <NavItem to={routeUrls.about} sx={{ mx: 4, color: textColor }}>
           About
         </NavItem>
         <FontAwesomeIcon
