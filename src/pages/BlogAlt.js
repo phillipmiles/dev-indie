@@ -43,7 +43,7 @@ const Blog = ({ posts }) => {
           </Heading>
         </Flex>
       </Header> */}
-        <ContentWrap sx={{ pt: 7, pb: 9 }}>
+        <ContentWrap sx={{ pt: 8, pb: 9 }}>
           <LinkCard
             to={`${routeUrls.post}/${posts[0].slug}`}
             sx={{

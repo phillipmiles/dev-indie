@@ -13,6 +13,7 @@ import Footer from '../components/Footer';
 import ContentBorder from '../components/ContentBorder';
 import Nav from '../components/Nav';
 import ProjectCard from '../components/ProjectCard';
+import { imgTestIll, imgTestIllBlue } from '../assets/assetLoader';
 
 const Projects = ({ projects }) => {
   return (
@@ -23,18 +24,31 @@ const Projects = ({ projects }) => {
         </ContentBorder>
       </header>
       <ContentBorder left right>
-        <ContentWrap sx={{ pt: 8 }}>
-          <div sx={{ width: '60%', mb: 6 }}>
-            <Heading as="h1" variant="heading2" sx={{ mb: 5 }}>
-              Real apps, transparently developed.
-            </Heading>
-            <Paragraph sx={{ mb: 8 }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-              eros velit, sollicitudin vel gravida sit amet, gravida eget
-              sapien. Proin tellus lorem, rhoncus eu pharetra non, dapibus a
-              nisl. Fusce aliquam nisi ut nunc suscipit sollicitudin.
-            </Paragraph>
-          </div>
+        <ContentWrap sx={{ pt: 9, pb: 8 }}>
+          <Flex sx={{ position: 'relative' }}>
+            <div
+              sx={{
+                position: 'absolute',
+                top: -80,
+                right: -16,
+                height: 480,
+                width: 530,
+                backgroundImage: `url(${imgTestIllBlue})`,
+                backgroundSize: 'cover',
+              }}
+            />
+            <div sx={{ width: '50%' }}>
+              <Heading as="h1" variant="heading2" sx={{ mb: 5 }}>
+                Real apps, transparently developed.
+              </Heading>
+              <Paragraph sx={{ mb: 8 }}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+                eros velit, sollicitudin vel gravida sit amet, gravida eget
+                sapien. Proin tellus lorem, rhoncus eu pharetra non, dapibus a
+                nisl. Fusce aliquam nisi ut nunc suscipit sollicitudin.
+              </Paragraph>
+            </div>
+          </Flex>
         </ContentWrap>
         <ContentWrap maxWidth={1144}>
           {projects &&
