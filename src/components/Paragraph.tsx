@@ -4,7 +4,7 @@ import { node, oneOf } from 'prop-types';
 
 interface Props {
   variant?: string;
-  children?: JSX.Element;
+  children?: string | Array<JSX.Element> | JSX.Element;
 }
 
 const Paragraph = ({ variant, children, ...props }: Props): JSX.Element => {

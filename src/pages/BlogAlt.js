@@ -24,11 +24,15 @@ const Blog = ({ posts }) => {
   return (
     <div>
       <header>
-        <ContentBorder left right>
+        <ContentBorder
+        //left right
+        >
           <Nav />
         </ContentBorder>
       </header>
-      <ContentBorder left right>
+      <ContentBorder
+      //left right
+      >
         {/* <Header sx={{ color: 'white', minHeight: 400 }}>
         <Flex
           sx={{

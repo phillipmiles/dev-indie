@@ -6,17 +6,7 @@ import Link from './Link';
 import ContentWrap from './ContentWrap';
 import { imgAvatar } from '../assets/assetLoader';
 
-interface Props {
-  title?: string;
-  imageSrc: string;
-  description: string;
-  tag: string;
-  timePublished: string;
-  readingLength: string;
-  to: string;
-}
-
-const Footer = ({ ...props }: Props): JSX.Element => {
+const Footer = (props: unknown): JSX.Element => {
   return (
     <ContentWrap
       {...props}

@@ -19,7 +19,7 @@ const Nav = ({ invert, ...props }) => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        px: [4, 6],
+        px: [4, 7],
         py: 3,
         // position: 'fixed',
         // left: 0,

@@ -4,13 +4,7 @@ import Input from './Input';
 import Text from './Text';
 
 interface Props {
-  // title?: string;
-  // imageSrc: string;
-  // description: string;
-  // tag: string;
-  // timePublished: string;
-  // readingLength: string;
-  // to: string;
+  shadow: boolean;
 }
 
 const SubscribeForm = ({ shadow, ...props }: Props): JSX.Element => {

@@ -1,33 +1,10 @@
 /** @jsx jsx */
 import { Flex, jsx } from 'theme-ui';
-import Heading from './Heading';
-import Image from './Image';
 import Paragraph from './Paragraph';
-import Text from './Text';
-import Link from './Link';
 import SubscribeForm from './SubscribeForm';
 import ContentWrap from './ContentWrap';
 
-interface Props {
-  title?: string;
-  imageSrc: string;
-  description: string;
-  tag: string;
-  timePublished: string;
-  readingLength: string;
-  to: string;
-}
-
-const SubscribeContentBlock = ({
-  title,
-  imageSrc,
-  description,
-  tag,
-  timePublished,
-  readingLength,
-  to,
-  ...props
-}: Props): JSX.Element => {
+const SubscribeContentBlock = (props: unknown): JSX.Element => {
   return (
     <ContentWrap
       {...props}

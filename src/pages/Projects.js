@@ -19,14 +19,15 @@ const Projects = ({ projects }) => {
   return (
     <div>
       <header>
-        <ContentBorder left right>
+        <ContentBorder
+        // left right
+        >
           <Nav />
         </ContentBorder>
       </header>
       <ContentBorder
-        left
-        right
-      //sx={{ bg: 'primaryLight' }}
+      // left
+      // right
       >
         <ContentWrap sx={{ pt: 9, pb: 8 }}>
           <Flex sx={{ position: 'relative' }}>
