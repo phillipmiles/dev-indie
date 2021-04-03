@@ -3,21 +3,13 @@ import { jsx } from 'theme-ui';
 import NavItem from './NavItem';
 import routeUrls from '../router/routeUrls';
 import Image from './Image';
-import {
-  imgLogoFull,
-  imgLogoBlack,
-  imgLogoPrimary,
-  imgLogoWhite,
-  imgLogoTest,
-  imgLogoTest2,
-} from '../assets/assetLoader';
+import { imgLogoTest2 } from '../assets/assetLoader';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
 import Link from './Link';
-import Text from './Text';
 
-const Nav = ({ invert, logoVariant, ...props }) => {
+const Nav = ({ invert, ...props }) => {
   const textColor = invert ? 'white' : 'black';
 
   return (
@@ -29,62 +21,16 @@ const Nav = ({ invert, logoVariant, ...props }) => {
         justifyContent: 'space-between',
         px: [4, 6],
         py: 3,
+        // position: 'fixed',
+        // left: 0,
+        // right: 0,
+        // top: 0,
+        // zIndex: 100,
+        // bg: 'white',
       }}
     >
       <Link to={routeUrls.home} sx={{ flexShrink: 0 }}>
-        {/* <Text
-          sx={{
-            variant: 'text.heading4',
-            // fontFamily: 'Filson Soft',
-            // fontFamily: 'Proxima Nova Condensed',
-            color: invert ? 'white' : 'black',
-            // fontWeight: 800,
-            // fontFamily: 'Demagogue DEMO',
-            letterSpacing: -1,
-            fontWeight: 400,
-            // fontFamily: 'Clootie DEMO',
-            // fontFamily: 'Bunny Daydream DEMO',
-            // fontFamily: 'League Spartan',
-          }}
-        >
-          Dev
-          <span
-            sx={{
-              ml: '8px',
-
-              variant: 'text.heading4',
-              // fontSize: '32px',
-              // fontWeight: 700,
-              // fontFamily: 'Clootie DEMO',
-              // fontFamily: 'Bunny Daydream DEMO',
-              // color: invert ? 'white' : 'primary',
-              // fontFamily: 'Demagogue DEMO',
-              // fontFamily: 'Sumida Script DEMO',
-              // fontFamily: 'Handlee',
-              // fontFamily: 'Caveat Brush',
-              // fontFamily: 'Neucha',
-              // fontFamily: 'LovelexieHandwritten',
-
-              // letterSpacing: -2,
-            }}
-          >
-            Indie
-          </span>
-        </Text> */}
         <Image src={imgLogoTest2} alt="Dev Indie logo" sx={{ height: 36 }} />
-        {/* <Image
-          src={
-            invert
-              ? logoVariant === 'full'
-                ? imgLogoFull
-                : imgLogoWhite
-              : logoVariant === 'primary'
-                ? imgLogoPrimary
-                : imgLogoBlack
-          }
-          alt="Dev Indie logo"
-          sx={{ height: [64, 56] }}
-        /> */}
       </Link>
       <div sx={{ py: 3 }}>
         <NavItem to={routeUrls.blog} sx={{ mx: 4, color: textColor }}>
@@ -109,13 +55,10 @@ const Nav = ({ invert, logoVariant, ...props }) => {
 
 Nav.propTypes = {
   invert: PropTypes.bool,
-  logoVariant: PropTypes.oneOf(['full', 'simple']),
 };
 
 Nav.defaultProps = {
-  logoVariant: 'full',
+  invert: false,
 };
 
-// global error handling -
-// protected route
 export default Nav;

@@ -17,7 +17,8 @@ export default {
     13: 512,
     14: 928,
     contentSmall: 664,
-    content: 1080,
+    // content: 1080,
+    content: 1140,
   },
   fonts: {
     body: 'filson-pro, sans-serif',
@@ -171,6 +172,7 @@ export default {
       },
       '::placeholder': {
         color: 'neutral.6',
+        opacity: 1,
       },
     },
   },

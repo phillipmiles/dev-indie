@@ -22,7 +22,7 @@ const ContentBorder = ({
       {...props}
       sx={{
         borderWidth: '20px',
-        borderColor: 'primaryLight',
+        borderColor: 'white',
         borderTopStyle: top ? 'solid' : 'none',
         borderLeftStyle: left ? 'solid' : 'none',
         borderRightStyle: right ? 'solid' : 'none',

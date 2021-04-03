@@ -121,7 +121,7 @@ const ProjectCard = ({
             transition: 'transform 200ms',
             width: '100%',
             height: '100%',
-            ':hover': { transform: 'scale(1.05)' },
+            ':hover': { transform: 'scale(1.025)' },
           }}
         />
       </Link>

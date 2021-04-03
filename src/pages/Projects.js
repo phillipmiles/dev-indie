@@ -13,7 +13,7 @@ import Footer from '../components/Footer';
 import ContentBorder from '../components/ContentBorder';
 import Nav from '../components/Nav';
 import ProjectCard from '../components/ProjectCard';
-import { imgTestIll, imgTestIllBlue } from '../assets/assetLoader';
+import { imgTestIllBlue, imgIllProjects } from '../assets/assetLoader';
 
 const Projects = ({ projects }) => {
   return (
@@ -23,7 +23,11 @@ const Projects = ({ projects }) => {
           <Nav />
         </ContentBorder>
       </header>
-      <ContentBorder left right>
+      <ContentBorder
+        left
+        right
+      //sx={{ bg: 'primaryLight' }}
+      >
         <ContentWrap sx={{ pt: 9, pb: 8 }}>
           <Flex sx={{ position: 'relative' }}>
             <div
@@ -33,7 +37,7 @@ const Projects = ({ projects }) => {
                 right: -16,
                 height: 480,
                 width: 530,
-                backgroundImage: `url(${imgTestIllBlue})`,
+                backgroundImage: `url(${imgIllProjects})`,
                 backgroundSize: 'cover',
               }}
             />

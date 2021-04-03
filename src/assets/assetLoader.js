@@ -35,6 +35,11 @@ import imgLogoTest2Import from './logotest2.png';
 import imgBlankImport from './blank.png';
 import imgTestIllImport from './test-ill.png';
 import imgTestIllBlueImport from './test-ill-blue.png';
+import imgSomehowTextImport from './somehow-text.png';
+import imgHeroMainImport from './hero-main.jpg';
+import imgHeroSecondaryImport from './hero-secondary.svg';
+import imgHeroOutlineImport from './hero-outline.svg';
+import imgIllProjectsImport from './ill-projects.png';
 
 // XXX: Should all images be imported from this location rather then direct imports
 // to avoid file name changes stuffing up file paths in multiple locations?
@@ -50,3 +55,9 @@ export const imgLogoTest2 = imgLogoTest2Import;
 export const imgBlank = imgBlankImport;
 export const imgTestIll = imgTestIllImport;
 export const imgTestIllBlue = imgTestIllBlueImport;
+export const imgSomehowText = imgSomehowTextImport;
+export const imgIllProjects = imgIllProjectsImport;
+
+export const imgHeroMain = imgHeroMainImport;
+export const imgHeroSecondary = imgHeroSecondaryImport;
+export const imgHeroOutline = imgHeroOutlineImport;

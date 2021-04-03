@@ -46,7 +46,7 @@ const SubscribeContentBlock = ({
             Learn from my many mistakes by subscribing to the Dev Indie
             newsletter.
           </Paragraph>
-          <SubscribeForm />
+          <SubscribeForm shadow />
         </div>
       </Flex>
     </ContentWrap>
