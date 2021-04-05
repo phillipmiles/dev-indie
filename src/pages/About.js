@@ -60,24 +60,28 @@ const About = ({ posts }) => {
       <ContentWrap sx={{ mt: 8, mb: 9 }}>
         <div sx={{ maxWidth: 'contentSmall', width: '100%' }}>
           <Paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            porttitor eros nec erat elementum, id pulvinar erat porta. Donec
-            tellus purus, venenatis vitae condimentum vel, semper non sem.
-            Phasellus eu consectetur diam, quis auctor libero.
+            Hi, I&apos;m Phillip and I love to make things with technology.
           </Paragraph>
           <Paragraph>
-            Phasellus eu quam quis elit vehicula pharetra. Nam aliquam dapibus
-            mollis. Sed vehicula elit ac pharetra vehicula. Mauris porta odio
-            eleifend venenatis consequat. Orci varius natoque penatibus et
-            magnis dis parturient montes, nascetur ridiculus mus. Praesent
-            faucibus, sem at laoreet viverra, sem tortor condimentum erat, eu
-            lacinia nisi leo vitae ante.
+            Dev Indie is a site I created to chronicale my journey in attempting
+            to make and hopefully monetize web and mobile apps.
           </Paragraph>
           <Paragraph>
-            Ut ac velit ac nunc sollicitudin finibus vitae vel libero. Nulla
-            vehicula orci ac aliquet ornare. Aliquam iaculis sagittis diam in
-            rutrum. Donec elementum vitae elit in imperdiet. Praesent eu
-            facilisis magna.
+            I expected to learn a lot about design, development and marketing
+            throughout the process and thought a place to share this knowledge
+            would be valuable with others who may be hoping to do something
+            similar.
+          </Paragraph>
+          <Paragraph>
+            In order to allow others get the most out of this site, I want to be
+            brutally honest and show transparency into how the apps are
+            performing. What the usage numbers are, what the running costs are,
+            how much (if any) revenue is coming in.
+          </Paragraph>
+          <Paragraph>
+            This data I could then align with any key actions and decisions I
+            have made to maybe suggest what works and doesn&apos;t work in
+            building successful apps.
           </Paragraph>
         </div>
       </ContentWrap>
