@@ -30,8 +30,58 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact, faNodeJs } from '@fortawesome/free-brands-svg-icons';
 import PageWithFooter from '../components/generic/PageWithFooter';
 import Button from '../components/Button';
+import { keyframes } from '@emotion/react';
+
+const fadeIn = keyframes({
+  '0%': { transform: 'translateY(10px)' },
+  '50%': { transform: 'translateY(-10px)' },
+  '100%': { transform: 'translateY(10px)' },
+});
+
+const hover2 = keyframes({
+  '0%': { transform: 'translateY(10px) scale(0.95) translateX(-50%)' },
+  '50%': { transform: 'translateY(-10px) scale(0.95) translateX(-50%)' },
+  '100%': { transform: 'translateY(10px) scale(0.95) translateX(-50%)' },
+});
+
+const hover3 = keyframes({
+  '0%': {
+    transform: 'translateY(10px) scale(0.9) ',
+  },
+  '50%': {
+    transform: 'translateY(-10px) scale(0.9) ',
+  },
+  '100%': {
+    transform: 'translateY(10px) scale(0.9) ',
+  },
+});
 
 const Home = ({ posts }) => {
+  // const animProjectImage1 = useSpring({
+  //   from: { translateY: -20 },
+  //   translateY: 20,
+  //   loop: { reverse: true },
+  //   config: {
+  //     duration: 1000,
+  //     //easing: 'd3-ease'
+  //   },
+  // });
+
+  // const animProjectImage2 = useSpring({
+  //   from: { translateY: -20 },
+  //   translateY: 20,
+  //   loop: { reverse: true },
+  //   delay: 200,
+  //   config: { duration: 1000 },
+  // });
+  // const animProjectImage3 = useSpring({
+  //   from: { translateY: -20 },
+  //   translateY: 20,
+  //   loop: { reverse: true },
+  //   delay: 400,
+  //   config: { duration: 1000 },
+  // });
+
   return (
     <PageWithFooter footerComponent={<SubscribeFooter />}>
       <header
@@ -264,72 +314,96 @@ const Home = ({ posts }) => {
               <div
                 sx={{
                   position: 'relative',
+                  height: 395,
                 }}
               >
-                <LazyLoader height={395}>
-                  <Image
-                    src={imgProjectsThumb}
-                    alt=""
-                    sx={{
-                      height: 395,
-                      borderRadius: 24,
-                      position: 'relative',
-                      zIndex: 1,
-                      boxShadow: '0 24px 48px -14px rgba(120,0,0,0.3)',
-                      // borderTopStyle: 'solid',
-                      // borderLeftStyle: 'solid',
-                      // borderRightStyle: 'solid',
-                      // borderColor: 'rgba(240,120,150,1)',
-                      // borderTopColor: 'rgba(255,140,170,1)',
-                      // borderWidth: '1px',
-                    }}
-                  />
-
-                  <Image
-                    src={imgBlankYellow}
-                    alt=""
-                    sx={{
-                      borderRadius: 24,
-                      // transform: 'rotate(18deg)',
-                      position: 'absolute',
-                      height: 395,
-                      width: '456px',
-                      top: 0,
-                      right: '0px',
-                      transformOrigin: 'right',
-                      transform: 'scale(0.9)',
-                      boxShadow: '0 8px 24px -8px rgba(204,124,0,0.3)',
-                      // boxShadow: '0px 8px 16px -6px rgba(204, 124, 0, 0.5)',
-                      // borderTopStyle: 'solid',
-                      // borderLeftStyle: 'solid',
-                      // borderColor: 'rgba(255,250,220,1)',
-                      // borderWidth: '1px',
-                      // opacity: 0.4,
-                    }}
-                  />
-                  <Image
-                    src={imgBlank}
-                    alt=""
-                    sx={{
-                      borderRadius: 24,
-                      // transform: 'rotate(8deg)',
-                      position: 'absolute',
-                      height: 395,
-                      width: '456px',
-                      top: 0,
-                      left: '50%',
-                      transform: 'scale(0.95) translateX(-50%)',
-                      // right: '-32px',
-                      boxShadow: '0 16px 36px -2px rgba(40,40,120,0.3)',
-                      // boxShadow: '0px 8px 20px -6px rgba(0,0,255,0.3)',
-                      // borderTopStyle: 'solid',
-                      // borderLeftStyle: 'solid',
-                      // borderColor: 'rgba(150,200,255,1)',
-                      // borderWidth: '1px',
-                      // opacity: 0.6,
-                    }}
-                  />
-                </LazyLoader>
+                {/* <LazyLoader height={395}> */}
+                {/* <animated.div style={animProjectImage3}> */}
+                <Image
+                  src={imgBlankYellow}
+                  alt=""
+                  sx={{
+                    borderRadius: 24,
+                    // transform: 'rotate(18deg)',
+                    position: 'absolute',
+                    height: 395,
+                    width: '456px',
+                    top: 0,
+                    right: '0px',
+                    transformOrigin: 'right',
+                    // transform: 'scale(0.9)',
+                    boxShadow: '0 8px 24px -8px rgba(204,124,0,0.3)',
+                    animationName: hover3,
+                    animationDuration: '4000ms',
+                    animationIterationCount: 'infinite',
+                    animationFillMode: 'backwards',
+                    animationTimingFunction: 'ease-in-out',
+                    animationDelay: '1600ms',
+                    // boxShadow: '0px 8px 16px -6px rgba(204, 124, 0, 0.5)',
+                    // borderTopStyle: 'solid',
+                    // borderLeftStyle: 'solid',
+                    // borderColor: 'rgba(255,250,220,1)',
+                    // borderWidth: '1px',
+                    // opacity: 0.4,
+                  }}
+                />
+                {/* </animated.div>
+                <animated.div style={animProjectImage2}> */}
+                <Image
+                  src={imgBlank}
+                  alt=""
+                  sx={{
+                    borderRadius: 24,
+                    // transform: 'rotate(8deg)',
+                    position: 'absolute',
+                    height: 395,
+                    width: '456px',
+                    top: 0,
+                    left: '50%',
+                    transform: 'scale(0.95) translateX(-50%)',
+                    // right: '-32px',
+                    boxShadow: '0 16px 36px -2px rgba(40,40,120,0.3)',
+                    animationName: hover2,
+                    animationDuration: '4000ms',
+                    animationIterationCount: 'infinite',
+                    animationFillMode: 'backwards',
+                    animationTimingFunction: 'ease-in-out',
+                    animationDelay: '800ms',
+                    // boxShadow: '0px 8px 20px -6px rgba(0,0,255,0.3)',
+                    // borderTopStyle: 'solid',
+                    // borderLeftStyle: 'solid',
+                    // borderColor: 'rgba(150,200,255,1)',
+                    // borderWidth: '1px',
+                    // opacity: 0.6,
+                  }}
+                />
+                {/* </animated.div> */}
+                {/* <animated.div style={animProjectImage1}> */}
+                <Image
+                  src={imgProjectsThumb}
+                  alt=""
+                  sx={{
+                    height: 395,
+                    borderRadius: 24,
+                    position: 'absolute',
+                    zIndex: 1,
+                    boxShadow: '0 24px 48px -14px rgba(120,0,0,0.3)',
+                    animationName: fadeIn,
+                    animationDuration: '4000ms',
+                    animationIterationCount: 'infinite',
+                    animationFillMode: 'backwards',
+                    animationTimingFunction: 'ease-in-out',
+                    // animationName: slidein;
+                    // borderTopStyle: 'solid',
+                    // borderLeftStyle: 'solid',
+                    // borderRightStyle: 'solid',
+                    // borderColor: 'rgba(240,120,150,1)',
+                    // borderTopColor: 'rgba(255,140,170,1)',
+                    // borderWidth: '1px',
+                  }}
+                />
+                {/* </animated.div> */}
+                {/* </LazyLoader> */}
               </div>
             </div>
           </Flex>
