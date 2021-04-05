@@ -260,9 +260,7 @@ const Home = ({ posts }) => {
             <div
               sx={{
                 width: '50%',
-
                 position: 'relative',
-                alignSelf: 'stretch',
               }}
             >
               <LazyLoader height={'100%'}>
@@ -286,6 +284,17 @@ const Home = ({ posts }) => {
                     // borderColor: 'rgba(240,120,150,1)',
                     // borderTopColor: 'rgba(255,140,170,1)',
                     // borderWidth: '1px',
+                  }}
+                />
+                <div
+                  sx={{
+                    bg: 'red',
+                    position: 'absolute',
+                    bottom: 0,
+                    width: '100%',
+                    height: '100px',
+                    background:
+                      'linear-gradient(0deg, rgba(236,244,250,0.9), rgba(236,244,250,0))',
                   }}
                 />
 
