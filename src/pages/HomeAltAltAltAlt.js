@@ -268,22 +268,10 @@ const Home = ({ posts }) => {
                   src={imgProjectsThumbTransparent}
                   alt=""
                   sx={{
-                    // height: 395,
-                    // borderRadius: 6,
                     position: 'absolute',
-                    // zIndex: 1,
-                    // ml: '128px',
-                    // top: 0,
-
                     bottom: 0,
-                    // width: '150%',
-                    // boxShadow: '0 6px 24px -6px rgba(205,0,0,0.5)',
-                    // borderTopStyle: 'solid',
-                    // borderLeftStyle: 'solid',
-                    // borderRightStyle: 'solid',
-                    // borderColor: 'rgba(240,120,150,1)',
-                    // borderTopColor: 'rgba(255,140,170,1)',
-                    // borderWidth: '1px',
+                    // transform: 'rotate(8deg) scale(110%)',
+                    // bottom: '-32px',
                   }}
                 />
                 <div
