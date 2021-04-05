@@ -15,6 +15,7 @@ import {
   imgHeroOutline,
   imgHeroSecondary,
   imgProjectsThumbTransparent,
+  imgProjectsThumbTransparentShadow,
 } from '../assets/assetLoader';
 import ButtonText from '../components/ButtonText';
 import routeUrls from '../router/routeUrls';
@@ -242,7 +243,7 @@ const Home = ({ posts }) => {
                 // justifyContent: 'space-between',
               }}
             > */}
-            <div sx={{ my: 8, p: 6, pl: 0, width: '50%' }}>
+            <div sx={{ my: 8, py: 8, pr: 6, pl: 0, width: '50%' }}>
               <Heading as="h3" sx={{ mb: 4 }}>
                 The projects
               </Heading>
@@ -260,33 +261,66 @@ const Home = ({ posts }) => {
             <div
               sx={{
                 width: '50%',
-                position: 'relative',
+                // pl: 6,
               }}
             >
-              <LazyLoader height={'100%'}>
+              <div
+                sx={{
+                  position: 'relative',
+                  width: '100%',
+                  height: '100%',
+                }}
+              >
+                <LazyLoader height={400}>
+                  {/* <Image
+                  src={imgProjectsThumbTransparent}
+                  alt=""
+                  sx={{
+                    position: 'absolute',
+                    bottom: 0,
+                    transform: 'translateX(200px)',
+                    // bottom: '-32px',
+                    opacity: 0.4,
+                  }}
+                />
                 <Image
                   src={imgProjectsThumbTransparent}
                   alt=""
                   sx={{
                     position: 'absolute',
                     bottom: 0,
-                    // transform: 'rotate(8deg) scale(110%)',
+                    transform: 'translateX(100px)',
                     // bottom: '-32px',
+                    opacity: 0.6,
                   }}
-                />
-                <div
-                  sx={{
-                    bg: 'red',
-                    position: 'absolute',
-                    bottom: 0,
-                    width: '100%',
-                    height: '100px',
-                    background:
-                      'linear-gradient(0deg, rgba(236,244,250,0.9), rgba(236,244,250,0))',
-                  }}
-                />
+                /> */}
+                  <Image
+                    src={imgProjectsThumbTransparentShadow}
+                    alt=""
+                    sx={{
+                      position: 'absolute',
+                      bottom: 0,
+                      top: '32px',
+                      height: '700px',
+                      right: 0,
+                      // transform: 'rotate(8deg) scale(110%)',
+                      // bottom: '-32px',
+                    }}
+                  />
 
-                {/* <Image
+                  <div
+                    sx={{
+                      bg: 'red',
+                      position: 'absolute',
+                      bottom: 0,
+                      width: '100%',
+                      height: '100px',
+                      background:
+                        'linear-gradient(0deg, rgba(236,244,250,0.9), rgba(236,244,250,0))',
+                    }}
+                  />
+
+                  {/* <Image
                   src={
                     'https://images.unsplash.com/photo-1531161339673-a943dd10e29f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'
                   }
@@ -327,7 +361,8 @@ const Home = ({ posts }) => {
                     // opacity: 0.6,
                   }}
                 /> */}
-              </LazyLoader>
+                </LazyLoader>
+              </div>
             </div>
           </Flex>
         </ContentWrap>

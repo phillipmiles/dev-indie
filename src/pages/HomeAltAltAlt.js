@@ -240,7 +240,7 @@ const Home = ({ posts }) => {
                 // justifyContent: 'space-between',
               }}
             > */}
-            <div sx={{ p: 6, pl: 0, width: '44%' }}>
+            <div sx={{ p: 6, pl: 0, width: '50%' }}>
               <Heading as="h3" sx={{ mb: 4 }}>
                 The projects
               </Heading>
@@ -258,7 +258,7 @@ const Home = ({ posts }) => {
             <div
               sx={{
                 pl: 6,
-                width: '56%',
+                width: '50%',
               }}
             >
               <div
