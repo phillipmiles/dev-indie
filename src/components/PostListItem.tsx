@@ -39,10 +39,9 @@ const PostListItem = ({
           flexShrink: 0,
         }}
       >
-        <LazyLoader height={192} offset={200}>
+        <LazyLoader height={192}>
           <Image
             src={imageSrc}
-            alt={title}
             sx={{
               width: ['100%', '328px'],
               height: '192px',

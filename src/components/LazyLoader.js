@@ -2,11 +2,28 @@
 import PropTypes from 'prop-types';
 import { jsx } from 'theme-ui';
 import LazyLoad from 'react-lazyload';
+import ImagePlaceholder from './ImagePlaceholder';
 
 // See react-lazyload documentation for additional properties...
 // https://www.npmjs.com/package/react-lazyload
-const LazyLoader = ({ height, offset, once, children, ...props }) => (
-  <LazyLoad {...props} height={height} offset={offset} once={once}>
+const LazyLoader = ({
+  placeholder,
+  height,
+  offset,
+  once,
+  children,
+  ...props
+}) => (
+  <LazyLoad
+    sx={{
+      bg: 'neutral.9',
+    }}
+    height={height}
+    offset={offset ? offset : 500}
+    once={once}
+    placeholder={placeholder ? placeholder : <ImagePlaceholder />}
+    {...props}
+  >
     {children}
   </LazyLoad>
 );

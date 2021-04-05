@@ -67,14 +67,7 @@ const RenderMarkdown = ({ content }) => {
             >
               {/* Need to standardise image heights so lazy loader knows
               what to do and to avoid content layout shifts. */}
-              <LazyLoader
-                height={200}
-                placeholder={
-                  <div
-                    sx={{ width: '100%', height: '100%', bg: 'neutral.8' }}
-                  />
-                }
-              >
+              <LazyLoader height={200}>
                 <Image src={src} alt={alt} sx={{ width: '100%' }} />
               </LazyLoader>
               {caption && (
