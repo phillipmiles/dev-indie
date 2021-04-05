@@ -9,6 +9,7 @@ import Paragraph from './Paragraph';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import routeUrls from '../router/routeUrls';
 import { getPlatformIcon } from '../resolvers/platforms';
+import Button from '../components/Button';
 
 const ProjectCard = ({
   title,
@@ -87,22 +88,12 @@ const ProjectCard = ({
             ))}
           </Flex>
         </div>
-        <Link
+        <Button
           to={`${routeUrls.projects}/${url}`}
-          sx={{
-            variant: 'text.detail',
-            fontWeight: 700,
-            bg: 'primary',
-            color: 'white',
-            borderRadius: '4px',
-            px: 4,
-            py: 3,
-
-            alignSelf: 'flex-start',
-          }}
+          sx={{ alignSelf: 'flex-start' }}
         >
           View project
-        </Link>
+        </Button>
       </Flex>
       <Link
         to={`${routeUrls.projects}/${url}`}
