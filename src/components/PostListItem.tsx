@@ -6,6 +6,7 @@ import Paragraph from './Paragraph';
 import Text from './Text';
 import Link from './Link';
 import LazyLoader from '../components/LazyLoader';
+import LinkCard from './LinkCard';
 
 interface Props {
   title?: string;
@@ -28,13 +29,17 @@ const PostListItem = ({
   ...props
 }: Props): JSX.Element => {
   return (
-    <Flex {...props} sx={{ flexDirection: ['column', 'row'] }}>
+    <LinkCard
+      {...props}
+      to={to}
+      sx={{ display: 'flex', flexDirection: ['column', 'row'] }}
+    >
       <Link
         to={to}
         sx={{
           mr: [0, 6],
           mb: [4, 0],
-          borderRadius: 24,
+          borderRadius: 6,
           overflow: 'hidden',
           flexShrink: 0,
         }}
@@ -76,7 +81,7 @@ const PostListItem = ({
           </Text>
         </Flex>
       </Flex>
-    </Flex>
+    </LinkCard>
   );
 };
 

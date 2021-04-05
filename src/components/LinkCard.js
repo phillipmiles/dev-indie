@@ -6,7 +6,6 @@ import Link from './Link';
 const LinkCard = ({ children, to, ...props }) => {
   return (
     <Link
-      {...props}
       to={to}
       sx={{
         position: 'relative',
@@ -33,6 +32,7 @@ const LinkCard = ({ children, to, ...props }) => {
           },
         },
       }}
+      {...props}
     >
       {children}
     </Link>

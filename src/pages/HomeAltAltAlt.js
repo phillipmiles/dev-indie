@@ -138,7 +138,7 @@ const Home = ({ posts }) => {
                     color: 'black',
                   }}
                 >
-                  <Heading as="h1" sx={{ mb: 5 }}>
+                  <Heading as="h1" sx={{ mb: 6 }}>
                     I&apos;m making
                     <br /> apps...{' '}
                     <Image
@@ -149,7 +149,10 @@ const Home = ({ posts }) => {
                   </Heading>
                   <Paragraph
                     variant="callout"
-                    sx={{ mb: 6, color: 'neutral.7' }}
+                    sx={{
+                      mb: 6,
+                      //color: 'neutral.7'
+                    }}
                   >
                     Learn from my many mistakes by subscribing to the Dev Indie
                     newsletter.
@@ -205,6 +208,7 @@ const Home = ({ posts }) => {
                         'center',
                         'flex-start',
                       ],
+                      color: 'neutral.7',
                     }}
                   >
                     <FontAwesomeIcon icon={faReact} size="2x" sx={{ mr: 4 }} />

@@ -232,30 +232,31 @@ const Home = ({ posts }) => {
               }
             }
           >
-            <Flex
+            {/* <Flex
               sx={{
                 my: 8,
                 p: 6,
                 pl: 0,
                 width: '50%',
                 flexDirection: 'column',
-                justifyContent: 'space-between',
+                // justifyContent: 'space-between',
               }}
-            >
-              <div>
-                <Heading as="h3" sx={{ mb: 4 }}>
-                  The projects
-                </Heading>
-                <Paragraph>
-                  Take a look at detailed breakdowns for each of my apps. See
-                  how they’re progressing and what decision’s I’m making in
-                  developing them.
-                </Paragraph>
-              </div>
+            > */}
+            <div sx={{ my: 8, p: 6, pl: 0, width: '50%' }}>
+              <Heading as="h3" sx={{ mb: 4 }}>
+                The projects
+              </Heading>
+              <Paragraph sx={{ mb: 6 }}>
+                Take a look at detailed breakdowns for each of my apps. See how
+                they’re progressing and what decision’s I’m making in developing
+                them.
+              </Paragraph>
+
               <Button to={routeUrls.projects} sx={{ alignSelf: 'flex-start' }}>
                 Go to projects
               </Button>
-            </Flex>
+            </div>
+            {/* </Flex> */}
             <div
               sx={{
                 width: '50%',

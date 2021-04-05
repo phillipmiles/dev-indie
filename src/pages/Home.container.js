@@ -11,7 +11,7 @@ import posts from '../posts/posts.js';
 // const processedPosts =
 
 const HomeContainer = () => {
-  return <HomeAltAltAlt posts={posts} />;
+  return <HomeAltAltAltAlt posts={posts} />;
 };
 
 export default HomeContainer;
