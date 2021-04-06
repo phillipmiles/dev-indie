@@ -33,11 +33,14 @@ const Nav = ({ invert, ...props }) => {
         <Image src={imgLogoTest2} alt="Dev Indie logo" sx={{ height: 36 }} />
       </Link>
       <div sx={{ py: 3 }}>
-        <NavItem to={routeUrls.blog} sx={{ mx: 4, color: textColor }}>
-          Blog
-        </NavItem>
         <NavItem to={routeUrls.projects} sx={{ mx: 4, color: textColor }}>
           Projects
+        </NavItem>
+        <NavItem to={routeUrls.blog} sx={{ mx: 4, color: textColor }}>
+          Dev tools
+        </NavItem>
+        <NavItem to={routeUrls.blog} sx={{ mx: 4, color: textColor }}>
+          Blog
         </NavItem>
         <NavItem to={routeUrls.about} sx={{ mx: 4, color: textColor }}>
           About
