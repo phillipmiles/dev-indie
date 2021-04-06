@@ -43,6 +43,9 @@ import imgHeroMainImport from './hero-main.jpg';
 import imgHeroSecondaryImport from './hero-secondary.svg';
 import imgHeroOutlineImport from './hero-outline.svg';
 import imgIllProjectsImport from './ill-projects.png';
+// import imgButtonOutline1Import from './button-outline-1.svg';
+import imgButtonOutline1Import from './button-outline-1.png';
+import imgCodeImport from './code.svg';
 
 // XXX: Should all images be imported from this location rather then direct imports
 // to avoid file name changes stuffing up file paths in multiple locations?
@@ -63,7 +66,10 @@ export const imgTestIll = imgTestIllImport;
 export const imgTestIllBlue = imgTestIllBlueImport;
 export const imgSomehowText = imgSomehowTextImport;
 export const imgIllProjects = imgIllProjectsImport;
+export const imgCode = imgCodeImport;
 
 export const imgHeroMain = imgHeroMainImport;
 export const imgHeroSecondary = imgHeroSecondaryImport;
 export const imgHeroOutline = imgHeroOutlineImport;
+
+export const imgButtonOutline1 = imgButtonOutline1Import;

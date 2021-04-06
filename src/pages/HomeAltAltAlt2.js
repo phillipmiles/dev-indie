@@ -16,8 +16,6 @@ import {
   imgHeroSecondary,
   imgBlank,
   imgBlankYellow,
-  imgButtonOutline1,
-  imgCode,
 } from '../assets/assetLoader';
 import ButtonText from '../components/ButtonText';
 import routeUrls from '../router/routeUrls';
@@ -177,8 +175,8 @@ const Home = ({ posts }) => {
                       //color: 'neutral.7'
                     }}
                   >
-                    Let me share with you what I learn by subscribing to the Dev
-                    Indie newsletter.
+                    Learn from my many mistakes by subscribing to the Dev Indie
+                    newsletter.
                   </Paragraph>
 
                   <div>
@@ -256,25 +254,7 @@ const Home = ({ posts }) => {
                 them.
               </Paragraph>
 
-              <Button
-                to={routeUrls.projects}
-                sx={{
-                  alignSelf: 'flex-start',
-                  // position: 'relative',
-                  // '::after': {
-                  //   content: "''",
-                  //   position: 'absolute',
-                  //   backgroundImage: `url(${imgButtonOutline1})`,
-                  //   backgroundRepeat: 'no-repeat',
-                  //   top: '-8px',
-                  //   left: '-6px',
-                  //   right: '4px',
-                  //   bottom: '2px',
-                  //   backgroundSize: '100% 100%',
-                  //   transform: 'scale(1.1)',
-                  // },
-                }}
-              >
+              <Button to={routeUrls.projects} sx={{ alignSelf: 'flex-start' }}>
                 Go to projects
               </Button>
             </div>
@@ -309,7 +289,6 @@ const Home = ({ posts }) => {
                     animationFillMode: 'backwards',
                     animationTimingFunction: 'ease-in-out',
                     animationDelay: '1800ms',
-                    objectFit: 'cover',
                   }}
                 />
                 <Image
@@ -330,7 +309,6 @@ const Home = ({ posts }) => {
                     animationFillMode: 'backwards',
                     animationTimingFunction: 'ease-in-out',
                     animationDelay: '900ms',
-                    objectFit: 'cover',
                   }}
                 />
                 <Image
@@ -347,7 +325,6 @@ const Home = ({ posts }) => {
                     animationIterationCount: 'infinite',
                     animationFillMode: 'backwards',
                     animationTimingFunction: 'ease-in-out',
-                    objectFit: 'cover',
                   }}
                 />
                 {/* </LazyLoader> */}
@@ -358,48 +335,72 @@ const Home = ({ posts }) => {
       </ContentBlock>
       <ContentBlock
         sx={{
-          bg: 'neutral.9',
+          bg: 'black',
+          position: 'relative',
+          '::before': {
+            content: '""',
+            position: 'absolute',
+            top: 0,
+            bottom: 0,
+            left: 0,
+            right: 0,
+
+            opacity: 1,
+            backgroundImage:
+              "url('https://miro.medium.com/max/2700/1*sqDbrZn3Xrtu6NQh5iXCsQ.png')",
+            backgroundSize: '70%',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center 35%',
+          },
+          '::after': {
+            content: '""',
+            position: 'absolute',
+            top: 0,
+            bottom: 0,
+            left: 0,
+            right: 0,
+
+            // opacity: 0.8,
+            background:
+              'linear-gradient(0deg, rgba(38,44,53,1) 20%, rgba(38,44,53,0.8), rgba(38,44,53,0) 80%)',
+          },
         }}
       >
         <ContentWrap
           sx={{
+            textAlign: 'center',
+            color: 'white',
+            position: 'relative',
+            zIndex: 1,
             alignItems: 'center',
+            mt: 400,
           }}
         >
-          <Flex sx={{ alignItems: 'center' }}>
-            <div
-              sx={{
-                pr: 6,
-                width: '50%',
-              }}
-            >
-              {/* <Image src="https://miro.medium.com/max/2700/1*sqDbrZn3Xrtu6NQh5iXCsQ.png" /> */}
-              <Image src={imgCode} />
-            </div>
-            <div
-              sx={{
-                pl: 6,
-                width: '50%',
-              }}
-            >
-              <Heading as="h3" sx={{ mb: 4 }}>
-                Dev tools
-              </Heading>
-              <Paragraph sx={{ mb: 6, maxWidth: 'contentSmall' }}>
-                I write a lot of code. Sometimes I write something useful. Take
-                a look. Perhaps you'll find it useful too.
-              </Paragraph>
+          <Flex
+            sx={{
+              alignItems: 'center',
+              justifyContent: 'center',
+              flexDirection: 'column',
+            }}
+          >
+            <Heading as="h3" sx={{ mb: 4 }}>
+              Dev tools
+            </Heading>
+            <Paragraph sx={{ mb: 6, maxWidth: 'contentSmall' }}>
+              Take a look at detailed breakdowns for each of my apps. See how
+              they’re progressing and what decision’s I’m making in developing
+              them.
+            </Paragraph>
 
-              <Button to={routeUrls.projects} sx={{ alignSelf: 'center' }}>
-                Go to tools
-              </Button>
-            </div>
+            <Button to={routeUrls.projects} sx={{ alignSelf: 'center' }}>
+              Go to tools
+            </Button>
           </Flex>
         </ContentWrap>
       </ContentBlock>
       <ContentBlock>
         <ContentWrap>
-          <Heading as="h3" sx={{ mb: 7 }}>
+          <Heading as="h3" sx={{ mb: 6 }}>
             Recent posts
           </Heading>
           <div
