@@ -5,7 +5,7 @@ import { imgProjectsThumb } from '../assets/assetLoader';
 const posts = [
   {
     slug: 'test-post-1',
-    title: 'How to increase your team’s productivity when stakes are high',
+    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
     description: 'An example of a short description.',
     createdAt: '2020-06-26T01:11:37.621Z',
     readingLength: '3 minutes',
@@ -35,7 +35,7 @@ const posts = [
     slug: 'test-post-2',
     title: 'Adding end-to-end encryption to your app',
     description:
-      'Exploring stacking contexts, one of the most misunderstood mechanisms in CSS.',
+      'In fermentum, dolor sed rutrum accumsan lorem risus maximus purus id tempus ipsum ex at nibh.',
     createdAt: '2020-06-26T01:11:37.621Z',
     readingLength: '3 minutes',
     tag: 'Tips & Tricks',
@@ -63,9 +63,9 @@ const posts = [
   },
   {
     slug: 'test-post-3',
-    title: 'In Hitman 3, Agent 47’s freedom is more important than yours',
+    title: 'Nam bibendum fringilla efficitur',
     description:
-      'Exploring stacking contexts, one of the most misunderstood mechanisms in CSS.',
+      'In fermentum, dolor sed rutrum accumsan lorem risus maximus purus id tempus ipsum ex at nibh.',
     createdAt: '2020-06-26T01:11:37.621Z',
     readingLength: '3 minutes',
     tag: 'Tips & Tricks',
@@ -92,7 +92,7 @@ const posts = [
   },
   {
     slug: 'test-post-4',
-    title: 'This is a test title 2',
+    title: 'Nam bibendum fringilla efficitur',
     description: 'An example of a short description.',
     createdAt: '2020-06-26T01:11:37.621Z',
     readingLength: '3 minutes',
@@ -145,7 +145,7 @@ const posts = [
     slug: 'test-post-5',
     title: 'Adding end-to-end encryption to your app',
     description:
-      'Exploring stacking contexts, one of the most misunderstood mechanisms in CSS.',
+      'In fermentum, dolor sed rutrum accumsan lorem risus maximus purus id tempus ipsum ex at nibh.',
     createdAt: '2020-06-26T01:11:37.621Z',
     readingLength: '3 minutes',
     tag: 'Tips & Tricks',
@@ -175,7 +175,7 @@ const posts = [
     slug: 'test-post-6',
     title: 'Adding end-to-end encryption to your app',
     description:
-      'Exploring stacking contexts, one of the most misunderstood mechanisms in CSS.',
+      'In fermentum, dolor sed rutrum accumsan lorem risus maximus purus id tempus ipsum ex at nibh.',
     createdAt: '2020-06-26T01:11:37.621Z',
     readingLength: '3 minutes',
     tag: 'Tips & Tricks',
@@ -205,7 +205,7 @@ const posts = [
     slug: 'test-post-7',
     title: 'Adding end-to-end encryption to your app',
     description:
-      'Exploring stacking contexts, one of the most misunderstood mechanisms in CSS.',
+      'In fermentum, dolor sed rutrum accumsan lorem risus maximus purus id tempus ipsum ex at nibh.',
     createdAt: '2020-06-26T01:11:37.621Z',
     readingLength: '3 minutes',
     tag: 'Tips & Tricks',
