@@ -248,7 +248,7 @@ const Home = ({ posts }) => {
           <Flex>
             <div sx={{ p: 6, pl: 0, width: '50%' }}>
               <Heading as="h3" sx={{ mb: 4 }}>
-                The Apps
+                The projects
               </Heading>
               <Paragraph sx={{ mb: 6 }}>
                 Take a look at detailed breakdowns for each of my apps. See how
@@ -383,7 +383,7 @@ const Home = ({ posts }) => {
               }}
             >
               <Heading as="h3" sx={{ mb: 4 }}>
-                Dev tools
+                Developer tools
               </Heading>
               <Paragraph sx={{ mb: 6, maxWidth: 'contentSmall' }}>
                 I write a lot of code. Sometimes I write something useful. Take
