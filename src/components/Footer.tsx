@@ -5,6 +5,7 @@ import Text from './Text';
 import Link from './Link';
 import ContentWrap from './ContentWrap';
 import { imgAvatar } from '../assets/assetLoader';
+import routeUrls from '../router/routeUrls';
 
 const Footer = (props: unknown): JSX.Element => {
   return (
@@ -44,7 +45,13 @@ const Footer = (props: unknown): JSX.Element => {
             >
               My name is
             </Text>
-            <Text variant="callout">Phillip Miles</Text>
+            <Link
+              to={routeUrls.about}
+              variant="callout"
+              sx={{ color: 'white', ':hover': { textDecoration: 'underline' } }}
+            >
+              Phillip Miles
+            </Link>
           </Flex>
         </Flex>
 
@@ -66,9 +73,18 @@ const Footer = (props: unknown): JSX.Element => {
           >
             Follow me on Twitter
           </Text>
-          <Text variant="detail" sx={{ mx: [1, 0] }}>
+          <Link
+            to="https://twitter.com/PhillipAMiles"
+            external
+            variant="detail"
+            sx={{
+              mx: [1, 0],
+              color: 'white',
+              ':hover': { textDecoration: 'underline' },
+            }}
+          >
             @PhillipAMiles
-          </Text>
+          </Link>
         </Flex>
         <Flex
           sx={{
@@ -88,10 +104,17 @@ const Footer = (props: unknown): JSX.Element => {
           >
             Get in touch
           </Text>
-          <Text variant="detail" sx={{ mx: [1, 0] }}>
-            {' '}
+          <Link
+            to="mailTo:phillip@devindie.dev"
+            external
+            sx={{
+              mx: [1, 0],
+              color: 'white',
+              ':hover': { textDecoration: 'underline' },
+            }}
+          >
             phillip@devindie.dev
-          </Text>
+          </Link>
         </Flex>
       </Flex>
     </ContentWrap>

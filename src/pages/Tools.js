@@ -41,8 +41,8 @@ const Tools = ({ tools }) => {
             > */}
           {tools &&
             tools.map((tool) => (
-              <div
-                // to={`${routeUrls.post}/${tool.slug}`}
+              <Link
+                to={`${routeUrls.tools}/${tool.slug}`}
                 key={tool.slug}
                 sx={{
                   bg: 'neutral.9',
@@ -50,8 +50,8 @@ const Tools = ({ tools }) => {
                   mx: 4,
                   width: '33%',
                   ':hover': {
-                    boxShadow: '0 0px 0px 4px #59B3FF',
-                    // boxShadow: '0 0px 0px 4px #70E1FC',
+                    boxShadow: (theme) =>
+                      `0 0px 0px 4px ${theme.colors.primaryLight}`,
                   },
                 }}
               >
@@ -70,7 +70,7 @@ const Tools = ({ tools }) => {
                     width: '100%',
                   }}
                 />
-              </div>
+              </Link>
             ))}
           {/* </div> */}
         </Flex>
