@@ -248,7 +248,7 @@ const Home = ({ posts }) => {
           <Flex>
             <div sx={{ p: 6, pl: 0, width: '50%' }}>
               <Heading as="h3" sx={{ mb: 4 }}>
-                The projects
+                The Apps
               </Heading>
               <Paragraph sx={{ mb: 6 }}>
                 Take a look at detailed breakdowns for each of my apps. See how
@@ -390,7 +390,7 @@ const Home = ({ posts }) => {
                 a look. Perhaps you'll find it useful too.
               </Paragraph>
 
-              <Button to={routeUrls.projects} sx={{ alignSelf: 'center' }}>
+              <Button to={routeUrls.tools} sx={{ alignSelf: 'center' }}>
                 Go to tools
               </Button>
             </div>
@@ -419,16 +419,19 @@ const Home = ({ posts }) => {
                     objectFit: 'cover',
                     width: '100%',
                     borderRadius: '8px',
-                    mb: 3,
+                    mb: 4,
                   }}
                 />
-                <PostCardTag to="">{post.tag}</PostCardTag>
+
                 <PostCardHeading variant="heading5">
                   {post.title}
                 </PostCardHeading>
-                <Paragraph sx={{ mb: 3 }}>{post.description}</Paragraph>
+                <Paragraph variant="bodySmall" sx={{ mb: 3 }}>
+                  {post.description}
+                </Paragraph>
                 <Flex sx={{ color: 'neutral.7' }}>
-                  <Text variant="detail" sx={{}}>
+                  <PostCardTag to="">{post.tag}</PostCardTag>
+                  <Text variant="detail" sx={{ ml: 4 }}>
                     {isoDateStringToLabel(post.createdAt)}
                   </Text>
                   <Text variant="detail" sx={{ ml: 4 }}>

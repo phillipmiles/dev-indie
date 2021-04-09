@@ -46,7 +46,8 @@ import imgIllProjectsImport from './ill-projects.png';
 // import imgButtonOutline1Import from './button-outline-1.svg';
 import imgButtonOutline1Import from './button-outline-1.png';
 import imgCodeImport from './code.svg';
-
+import imgReactComponentLibraryThumbImport from './tools/react-component-library-thumb.png';
+import imgReactUseFormStateThumbImport from './tools/react-useFormState-thumb.png';
 // XXX: Should all images be imported from this location rather then direct imports
 // to avoid file name changes stuffing up file paths in multiple locations?
 export const imgHomeHero = imgHomeHeroImport;
@@ -73,3 +74,7 @@ export const imgHeroSecondary = imgHeroSecondaryImport;
 export const imgHeroOutline = imgHeroOutlineImport;
 
 export const imgButtonOutline1 = imgButtonOutline1Import;
+
+// Tool thumbnails
+export const imgReactComponentLibraryThumb = imgReactComponentLibraryThumbImport;
+export const imgReactUseFormStateThumb = imgReactUseFormStateThumbImport;

@@ -31,7 +31,7 @@ const ProjectCard = ({
         bg: 'neutral.9',
         borderRadius: '6px',
         overflow: 'hidden',
-        height: 560,
+        // minHeight: 420,
       }}
       {...props}
     >

@@ -36,7 +36,7 @@ const Nav = ({ invert, ...props }) => {
         <NavItem to={routeUrls.projects} sx={{ mx: 4, color: textColor }}>
           Projects
         </NavItem>
-        <NavItem to={routeUrls.blog} sx={{ mx: 4, color: textColor }}>
+        <NavItem to={routeUrls.tools} sx={{ mx: 4, color: textColor }}>
           Dev tools
         </NavItem>
         <NavItem to={routeUrls.blog} sx={{ mx: 4, color: textColor }}>
@@ -45,12 +45,12 @@ const Nav = ({ invert, ...props }) => {
         <NavItem to={routeUrls.about} sx={{ mx: 4, color: textColor }}>
           About
         </NavItem>
-        <FontAwesomeIcon
+        {/* <FontAwesomeIcon
           icon={faTwitter}
           size="1x"
           sx={{ mx: 4, color: textColor }}
         />
-        <FontAwesomeIcon icon={faGithub} sx={{ ml: 2, color: textColor }} />
+        <FontAwesomeIcon icon={faGithub} sx={{ ml: 2, color: textColor }} /> */}
       </div>
     </nav>
   );

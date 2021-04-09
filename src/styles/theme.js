@@ -16,7 +16,7 @@ export default {
     12: 360,
     13: 512,
     14: 928,
-    contentSmall: 664,
+    contentSmall: 680,
     // content: 1080,
     content: 1140,
   },
@@ -26,7 +26,9 @@ export default {
     // Menlo is a nice backup shipped with Mac OSX Snow Leopard only.
     monospace: 'source-code-pro, Menlo, monospace',
   },
-  fontSizes: [15.2, 19, 23.75, 29.69, 39.11, 46.39, 57.98, 72.48],
+  // fontSizes: [15.2, 19, 23.75, 29.69, 39.11, 46.39, 57.98, 72.48],
+  // fontSizes: [14.4, 18, 22.5, 28.13, 35.16, 43.95, 54.93, 68.66],
+  fontSizes: [15, 17, 19, 22, 28, 36, 44, 56, 68],
   fontWeights: {
     regular: 400,
     bold: 700,
@@ -43,49 +45,56 @@ export default {
   text: {
     heading1: {
       fontFamily: 'heading',
-      fontSize: 6,
+      fontSize: 7,
       lineHeight: 'tight',
       fontWeight: 'bold',
     },
     heading2: {
       fontFamily: 'heading',
-      fontSize: 5,
+      fontSize: 6,
       lineHeight: 'tight',
       fontWeight: 'bold',
     },
     heading3: {
       fontFamily: 'heading',
-      fontSize: 4,
+      fontSize: 5,
       lineHeight: 'tight',
       fontWeight: 'bold',
     },
     heading4: {
       fontFamily: 'heading',
-      fontSize: 3,
+      fontSize: 4,
       lineHeight: 'tight',
       fontWeight: 'bold',
     },
     heading5: {
       fontFamily: 'heading',
-      fontSize: 2,
+      fontSize: 3,
       lineHeight: 'tight',
       fontWeight: 'bold',
     },
     heading6: {
       fontFamily: 'heading',
-      fontSize: 1,
+      fontSize: 2,
       lineHeight: 'tight',
       fontWeight: 'bold',
     },
-    body: {
+    bodySmall: {
       fontFamily: 'body',
       fontSize: 1,
       lineHeight: 'normal',
       fontWeight: 'regular',
     },
-    callout: {
+    body: {
       fontFamily: 'body',
       fontSize: 2,
+      lineHeight: 'normal',
+      fontWeight: 'regular',
+    },
+    // Also could be called bodyLarge
+    callout: {
+      fontFamily: 'body',
+      fontSize: 3,
       lineHeight: 'normal',
       fontWeight: 'regular',
     },

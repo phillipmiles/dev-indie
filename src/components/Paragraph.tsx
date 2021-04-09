@@ -17,7 +17,7 @@ const Paragraph = ({ variant, children, ...props }: Props): JSX.Element => {
 
 Paragraph.propTypes = {
   children: node,
-  variant: oneOf(['body', 'callout', 'detail']),
+  variant: oneOf(['body', 'bodySmall', 'bodyLarge', 'callout', 'detail']),
 };
 
 export default Paragraph;

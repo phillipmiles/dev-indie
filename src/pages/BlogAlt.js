@@ -154,7 +154,9 @@ const Blog = ({ posts }) => {
                 <PostCardHeading variant="heading5">
                   {post.title}
                 </PostCardHeading>
-                <Paragraph sx={{ mb: 3 }}>{post.description}</Paragraph>
+                <Paragraph sx={{ mb: 3 }} variant="bodySmall">
+                  {post.description}
+                </Paragraph>
                 <Flex sx={{ color: 'neutral.7' }}>
                   <Text variant="detail" sx={{}}>
                     {isoDateStringToLabel(post.createdAt)}

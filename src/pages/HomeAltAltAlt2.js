@@ -429,12 +429,8 @@ const Home = ({ posts }) => {
                 </PostCardHeading>
                 <Paragraph sx={{ mb: 3 }}>{post.description}</Paragraph>
                 <Flex sx={{ color: 'neutral.7' }}>
-                  <Text variant="detail" sx={{}}>
-                    {isoDateStringToLabel(post.createdAt)}
-                  </Text>
-                  <Text variant="detail" sx={{ ml: 4 }}>
-                    {post.readingLength}
-                  </Text>
+                  <Text sx={{}}>{isoDateStringToLabel(post.createdAt)}</Text>
+                  <Text sx={{ ml: 4 }}>{post.readingLength}</Text>
                 </Flex>
               </LinkCard>
             ))}

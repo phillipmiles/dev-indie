@@ -52,6 +52,7 @@ const PostContainer = () => {
   return (
     <C
       title={post.title}
+      description={post.description}
       content={post.content}
       tag={post.tag}
       topics={post.topics}

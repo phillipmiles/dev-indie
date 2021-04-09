@@ -24,6 +24,10 @@ const Projects = loadable(() => import('../pages/Projects.container'), {
   fallback: <ActivityIndicator />,
 });
 
+const Tools = loadable(() => import('../pages/Tools.container'), {
+  fallback: <ActivityIndicator />,
+});
+
 const About = loadable(() => import('../pages/About.container'), {
   fallback: <ActivityIndicator />,
 });
@@ -53,6 +57,9 @@ const Router = () => {
         </Route>
         <Route path={routeUrls.projects}>
           <Projects />
+        </Route>
+        <Route path={routeUrls.tools}>
+          <Tools />
         </Route>
         <Route path={routeUrls.about}>
           <About />
