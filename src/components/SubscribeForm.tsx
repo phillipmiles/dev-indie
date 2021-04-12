@@ -20,6 +20,10 @@ const SubscribeForm = ({ shadow, ...props }: Props): JSX.Element => {
             mr: [0, 2],
             mb: ['12px', 0],
             textAlign: ['center', 'left'],
+            ':focus': {
+              boxShadow: (theme) =>
+                `0 0px 0px 4px ${theme.colors.primaryLight}`,
+            },
           }}
         />
         <button

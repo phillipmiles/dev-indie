@@ -191,6 +191,10 @@ const Home = ({ posts }) => {
                           textAlign: ['center', 'left'],
                           bg: 'neutral.9',
                           color: 'primary',
+                          ':focus': {
+                            boxShadow: (theme) =>
+                              `0 0px 0px 4px ${theme.colors.primaryLight}`,
+                          },
                         }}
                       />
                       <button
